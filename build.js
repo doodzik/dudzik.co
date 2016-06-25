@@ -41,13 +41,20 @@ metalsmith(__dirname)
     html: true
   }))
 
+
   .use(collections({
-    "digressing-into-development": {
-      pattern: 'digressing-into-development/**/**.html',
+    "digress-into-development": {
+      pattern: 'digress-into-development/**/**.html',
+      sortBy:  'timestamp',
+      reverse: true
+    },
+    "simplify": {
+      pattern: 'simplify/**/**.html',
       sortBy:  'timestamp',
       reverse: true
     }
   }))
+
 
   // todo timestamp to year
 
@@ -70,9 +77,9 @@ metalsmith(__dirname)
   }))
 
   .use(feed({
-    collection: 'digressing-into-development',
+    collection: 'digress-into-development',
     destination: 'rss.xml',
-    title: 'digressing into development',
+    title: 'digress into development',
     description: 'hallo world',
   }))
 
