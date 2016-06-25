@@ -78,7 +78,7 @@ metalsmith(__dirname)
 
   .use(feed({
     collection: 'digress-into-development',
-    destination: 'rss.xml',
+    destination: 'atom.xml',
     title: 'digress into development',
     description: 'hallo world',
   }))
