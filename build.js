@@ -62,16 +62,23 @@ metalsmith(__dirname)
 
   // minimatch the filenames
   .use(function (files, metalsmith, done) {
+        // remove archive from collection
+        metalsmith.metadata().collections['digress-into-development'].pop()
+
         Object.keys(files).forEach(function (filename) {
             var file = files[filename]
 
             // add headline metadata to index page of digress into dev
-            console.log(filename)
             if ( minimatch(filename, 'digress-into-development/index.html') ) {
                 file['headline'] = metalsmith.metadata()
                                              .collections['digress-into-development'][0]
                                              .headline
             }
+            else if ( minimatch(filename, 'simplify/index.html') ) {
+                file['headline'] = metalsmith.metadata()
+                                             .collections['simplify'][0]
+                                             .headline
+            } 
         })
         done()
   })
