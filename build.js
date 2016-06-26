@@ -15,6 +15,7 @@ var compress         = require('metalsmith-gzip')
 var formatcheck      = require('metalsmith-formatcheck')
 var htmlMinifier     = require("metalsmith-html-minifier")
 var markdown         = require('metalsmith-markdownit')
+var minimatch        = require("minimatch")
 
 var autoprefixer     = require('autoprefixer')
 
@@ -41,7 +42,6 @@ metalsmith(__dirname)
     html: true
   }))
 
-
   .use(collections({
     "digress-into-development": {
       pattern: 'digress-into-development/**/**.html',
@@ -55,25 +55,33 @@ metalsmith(__dirname)
     }
   }))
 
-
-  // todo timestamp to year
-
   .use(permalinks({
       relative: false,
-      pattern: ':collections/:year/:title'
+      pattern: ':collection/:headline'
   }))
+
+  // minimatch the filenames
+  .use(function (files, metalsmith, done) {
+        Object.keys(files).forEach(function (filename) {
+            var file = files[filename]
+
+            // add headline metadata to index page of digress into dev
+            console.log(filename)
+            if ( minimatch(filename, 'digress-into-development/index.html') ) {
+                file['headline'] = metalsmith.metadata()
+                                             .collections['digress-into-development'][0]
+                                             .headline
+            }
+        })
+        done()
+  })
 
   .use(inPlace('swig'))
 
   .use(layout({
     engine: 'jade',
-    'default': 'default.jade',
-    'pattern': '**/**.html'
-  }))
-
-  .use(permalinks({
-      relative: false,
-      pattern: ':title'
+    default: 'default.jade',
+    pattern: '**/**.html'
   }))
 
   .use(feed({
@@ -83,7 +91,7 @@ metalsmith(__dirname)
     description: 'hallo world',
   }))
 
-  .use(formatcheck({ verbose: true }))
+  // .use(formatcheck({ verbose: true }))
   .use(sitemap({ hostname: 'http://dudzik.co' }))
 
   .use(If(
