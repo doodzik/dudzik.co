@@ -4,6 +4,7 @@ headline: Why Passwords don’t make sense
 date: 2015-09-30 12:05:15 +0200
 description: The personal website of frederik dudzik
 keywords: dudzik, frederik dudzik, email authentication, no more password, email authentication
+redirect_from: blog/2015/09/30/why-passwords-dont-make-sense/index.html
 ---
 
 Passwords infuriate me.<br>

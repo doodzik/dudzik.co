@@ -6,6 +6,7 @@ comments: true
 sharing: true
 description: The personal website of frederik dudzik
 keywords: dudzik, frederik dudzik, ruby pattern matching, defp, ruby metaprogramming
+redirect_from: blog/2014/10/27/i-went-on-a-journey-to-haskell-and-all-i-got-was-a-pattern-matcher-for-ruby/index.html
 ---
 
 ## tl;dr

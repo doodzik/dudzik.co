@@ -2,7 +2,9 @@
 layout: archive.jade
 description: The personal website of frederik dudzik
 keywords: dudzik, frederik dudzik
+redirect_from: blog/archives/index.html
 ---
+
 {% for post in collections['digress-into-development'] %}
   {% if current_year | default('null') != post.date | date('Y') %}
     {{ post.date | date('Y') }}

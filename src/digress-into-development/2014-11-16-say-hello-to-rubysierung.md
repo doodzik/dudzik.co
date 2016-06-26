@@ -4,6 +4,7 @@ headline: Say hello to Rubysierung
 date: 2014-11-16 21:59:35 +0100
 description: The personal website of frederik dudzik
 keywords: dudzik, frederik dudzik, rubysierung, soft-typing, ruby soft-typing, ruby conversion methods, conversion methods
+redirect_from: blog/2014/11/16/say-hello-to-rubysierung/index.html
 ---
 
 After reading [Avdi Grimm's](http://devblog.avdi.org/) book "[Confident Ruby](http://www.confidentruby.com/)” and my work on [CallBaecker](https://github.com/doodzik/CallBaecker) and [defp](https://github.com/doodzik/defp) I had an Idea for an implementation of soft typing in Ruby.

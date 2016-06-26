@@ -4,6 +4,7 @@ headline: "An introduction to Category Theory: Slides"
 date: 2014-12-02 16:10:55 +0100
 description: The personal website of frederik dudzik
 keywords: dudzik, frederik dudzik, category-theory
+redirect_from: blog/2014/12/02/an-introduction-to-category-theory-slides/index.html
 ---
 
 
