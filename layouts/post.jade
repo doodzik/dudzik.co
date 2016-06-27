@@ -18,13 +18,20 @@ html
       h1
         a(href=pathContent)
           = headline
-      address by  
-        a(href="/" rel="author") Frederik Dudzik
 
     #contents!=contents
+    
+    hr
 
     footer
-      h3
-        a(href="/digress-into-development/archive") all posts
-      h3
-        a(href="/atom.xml") rss
+      | My name is&nbsp;
+      address
+        a(href="/" rel="author") Frederik Dudzik
+      | &nbsp;and I wrote this article. Feel free to&nbsp;
+      a(href="/contact") contact me
+      | &nbsp;or to check out my&nbsp;
+      a(href="/digress-into-development/archive") other posts
+      | .
+      br
+      | You can follow digress into development through&nbsp;
+      a(href="/atom.xml") rss
