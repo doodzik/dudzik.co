@@ -4,13 +4,18 @@ description: The personal website of frederik dudzik
 keywords: dudzik, frederik dudzik
 redirect_from: blog/archives/index.html
 ---
-
-{% for post in collections['digress-into-development'] %}
-  {% if current_year | default('null') != post.date | date('Y') %}
-    {{ post.date | date('Y') }}
-  {% endif %}
-  {% set current_year = post.date | date('Y') %}
-  <a href="/{{ post.path }}"> 
-    <h3>{{post.headline}}</h3>
-  </a>
-{% endfor %}
+<ul class="archive">
+  {% for post in collections['digress-into-development'] %}
+    <li>
+      {% if current_year | default('null') != post.date | date('Y') %}
+        <span class="date">
+          {{ post.date | date('Y') }}
+        </span>
+      {% endif %}
+      {% set current_year = post.date | date('Y') %}
+      <a href="/{{ post.path }}"> 
+        <h3>{{post.headline}}</h3>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

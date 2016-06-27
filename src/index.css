@@ -8,6 +8,12 @@ body {
   background: #EEEEEE;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 h1, h2, h3 {
   line-height: 1.2;
 }
@@ -28,6 +34,15 @@ header h3 {
 
 header a {
   text-decoration: inherit;
+}
+
+.archive a {
+  text-decoration: none;
+}
+
+.date {
+  color: rgba(68, 68, 68, 0.4);
+  font-weight: bold;
 }
 
 hr {
