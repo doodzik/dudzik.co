@@ -45,6 +45,18 @@ header a {
   font-weight: bold;
 }
 
+textarea, input[type="text"] {
+  width: 100%;
+  display: block;
+  padding: .5em 1%;
+  margin-bottom: 1.5em;
+  font-size: 1em;
+}
+
+textarea {
+  height: 10em;
+}
+
 hr {
   margin: 40px 0 30px 0;
   border: 0;
