@@ -119,6 +119,7 @@ metalsmith(__dirname)
 
   .use(layout({
     engine: 'jade',
+    partials: "partials",
     default: 'default.jade',
     pattern: '**/**.html'
   }))

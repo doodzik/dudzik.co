@@ -1,16 +1,6 @@
 doctype html
 html
-  head
-    if headline
-      title=title + ' - ' + headline
-    else
-      title=title
-    link(rel="stylesheet" href="/#{fingerprint['index.css']}")
-    !=head
-    meta(name="robots" content="index,follow")
-    meta(name="keywords" content=keywords)
-    meta(name="description" content=description)
-    meta(name="author" content="Frederik Dudzik - www.dudzik.co")
+  include ../partials/head
   body
     header
       h3

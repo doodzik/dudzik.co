@@ -1,15 +1,5 @@
 doctype html
 html
-  head
-    if subtitle
-      title=title + ' - ' + subtitle
-    else
-      title=title
-    link(rel="stylesheet" href="/#{fingerprint['index.css']}")
-    !=head
-    meta(name="robots" content="index,follow")
-    meta(name="keywords" content=keywords)
-    meta(name="description" content=description)
-    meta(name="author" content="Frederik Dudzik - www.dudzik.co")
+  include ../partials/head
   body
     #contents!=contents
