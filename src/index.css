@@ -54,17 +54,6 @@ address {
   display: inline;
 }
 
-textarea, input[type="text"] {
-  width: 100%;
-  display: block;
-  padding: .5em 1%;
-  margin-bottom: 1.5em;
-  font-size: 1em;
-}
-
-textarea {
-  height: 10em;
-}
 
 /************************/
 /*********Header*********/
@@ -85,6 +74,31 @@ header a {
 footer {
   color: var(--color-text-unobtrusive);
   font-size: 0.85em;
+}
+
+header a {
+  text-decoration: none;
+}
+
+/************************/
+/*********Contact********/
+/************************/
+
+.contact-message {
+  width: 100%;
+  display: block;
+  padding: .5em 1%;
+  margin-bottom: 1.5em;
+  font-size: 1em;
+  height: 10em;
+}
+
+.contact-email {
+  width: 100%;
+  display: block;
+  padding: .5em 1%;
+  margin-bottom: 1.5em;
+  font-size: 1em;
 }
 
 /************************/

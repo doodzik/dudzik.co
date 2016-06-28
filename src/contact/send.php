@@ -1,4 +1,5 @@
 <?php
+require(__DIR__ . '/../../env.php');
 
 function clean_string($string) {
   $bad = array("content-type","bcc:","to:","cc:","href");
@@ -7,8 +8,6 @@ function clean_string($string) {
 
 if (empty($_POST["username"]) && !empty($_POST["content"]) && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
 
-  $to      = $_ENV["EMAIL"];
-  $from    = $_ENV["EMAILFROM"];
   $subject = 'dudzik.co - form';
   $message = clean_string($_POST["content"]);
   $replyTo = $_POST["email"];
@@ -23,4 +22,4 @@ if (empty($_POST["username"]) && !empty($_POST["content"]) && filter_var($_POST[
 header("Location: http://dudzik.co/contact/success");
 die();
 
-?> 
+?>
