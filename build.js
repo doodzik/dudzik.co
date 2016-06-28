@@ -88,14 +88,18 @@ metalsmith(__dirname)
                                       .collections['digress-into-development'][0]
                 file['headline']    = first.headline
                 file['pathContent'] = '/' + first.path
-                file['collection'] = 'digress-into-development'
+                file['collection']  = 'digress-into-development'
+                file['description'] = first.description
+                file['keywords']    = first.keywords
             }
             else if ( minimatch(filename, 'simplify/index.html') ) {
                 var first = metalsmith.metadata()
                                       .collections['simplify'][0]
                 file['headline']    = first.headline
                 file['pathContent'] = '/' + first.path
-                file['collection'] = 'simplify'
+                file['collection']  = 'simplify'
+                file['description'] = first.description
+                file['keywords']    = first.keywords
             } 
 
             // create a redirect_from

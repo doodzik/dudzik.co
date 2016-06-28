@@ -1,11 +1,9 @@
 ---
-layout: post.pug
-headline: I went on a journey to Haskell and all I got was a pattern matcher for ruby
-date: 2014-10-27 21:46:55 +0100
-comments: true
-sharing: true
-description: The personal website of frederik dudzik
-keywords: dudzik, frederik dudzik, ruby pattern matching, defp, ruby metaprogramming
+layout:        post.pug
+headline:      I went on a journey to Haskell and all I got was a pattern matcher for ruby
+date:          2014-10-27 21:46:55 +0100
+description:   I have implemented a pattern matcher in ruby with the help of metaprogramming
+keywords:      dudzik, frederik dudzik, ruby pattern matching, defp, ruby metaprogramming
 redirect_from: blog/2014/10/27/i-went-on-a-journey-to-haskell-and-all-i-got-was-a-pattern-matcher-for-ruby/index.html
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: The personal website of frederik dudzik
-keywords: dudzik, frederik dudzik
+description: The personal website of Frederik Dudzik
+keywords:    dudzik, frederik dudzik, digress into development, simplify my life
 ---
 Hello World,
 

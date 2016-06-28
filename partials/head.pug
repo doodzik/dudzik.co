@@ -1,6 +1,8 @@
 head
-  if subtitle
-    title=title + ' - ' + subtitle
+  if headline
+    title=headline + ' - ' + title 
+  else if subtitle
+    title=subtitle + ' - ' + title 
   else
     title=title
   link(rel="stylesheet" media="all" href=`/${fingerprint['index.css']}`)
