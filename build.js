@@ -117,6 +117,15 @@ metalsmith(__dirname)
         done()
   })
 
+  .use(function (files, metalsmith, done) {
+        Object.keys(files).forEach(function (filename) {
+            var file = files[filename]
+            if ( minimatch(filename, 'digress-into-development/index.html') ) {
+              console.log(file.contents.toString())
+            }
+        done()
+  })})
+
   .use(inPlace('swig'))
 
   .use(layout({
@@ -125,6 +134,15 @@ metalsmith(__dirname)
     default: 'default.jade',
     pattern: '**/**.html'
   }))
+
+  .use(function (files, metalsmith, done) {
+        Object.keys(files).forEach(function (filename) {
+            var file = files[filename]
+            if ( minimatch(filename, 'digress-into-development/index.html') ) {
+              console.log(file.contents.toString())
+            }
+        done()
+  })})
 
   // TODO: remove this rss feed
   .use(feed({
