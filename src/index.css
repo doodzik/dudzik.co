@@ -113,3 +113,11 @@ header a {
   color: var(--color-text-unobtrusive);
   font-weight: bold;
 }
+
+/************************/
+/*********Post***********/
+/************************/
+
+pre {
+  overflow-y: auto;
+}
