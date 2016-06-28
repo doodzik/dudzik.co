@@ -14,7 +14,7 @@ html
   body
     header
       h3
-        a(href="/digress-into-development") digress into development
+        a(href="/" + collection)=collectionName
       h1
         a(href=pathContent)
           = headline
@@ -30,8 +30,8 @@ html
       | &nbsp;and I wrote this article. Feel free to&nbsp;
       a(href="/contact") contact me
       | &nbsp;or to check out my&nbsp;
-      a(href="/digress-into-development/archive") other posts
+      a(href="archive") other posts
       | .
       br
       | You can follow digress into development through&nbsp;
-      a(href="/atom.xml") rss
+      a(href="atom.xml") rss

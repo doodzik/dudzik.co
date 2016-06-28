@@ -71,6 +71,15 @@ metalsmith(__dirname)
             var file = files[filename]
             file['pathContent'] = '/' + file.path
 
+            if ( minimatch(filename, 'digress-into-development/**/**') ) {
+                file['collectionName'] = 'digress into development'
+                file['rssPath'] = '/atom.xml'
+            }
+            else if (minimatch(filename, 'simplify/**/**')) {
+                file['collectionName'] = 'simplify'
+                file['rssPath'] = '/simplify/atom.xml'
+            }
+
             // add headline metadata to index page of digress into dev
             if ( minimatch(filename, 'digress-into-development/index.html') ) {
                 var first = metalsmith.metadata()
@@ -96,11 +105,11 @@ metalsmith(__dirname)
               var url      = metalsmith.metadata().site.url + '/' + file.path
               fileNew      = _.cloneDeep(file)
               fileNew['private'] = true
-              fileNew['contents'] = new Buffer(
+              fileNew['contents'] = new Buffer
                 '<?php Header("HTTP/1.1 301 Moved Permanently");Header("Location:' + url + '");?>')
               files[filePath] = fileNew
         })
-
+ 
         done()
   })
 
@@ -112,10 +121,25 @@ metalsmith(__dirname)
     pattern: '**/**.html'
   }))
 
+  // TODO: remove this rss feed
   .use(feed({
     collection: 'digress-into-development',
     destination: 'atom.xml',
     title: 'digress into development',
+    description: 'hallo world',
+  }))
+
+  .use(feed({
+    collection: 'digress-into-development',
+    destination: 'digress-into-development/atom.xml',
+    title: 'digress into development',
+    description: 'hallo world',
+  }))
+
+  .use(feed({
+    collection: 'simplify',
+    destination: 'simplify/atom.xml',
+    title: 'simplify',
     description: 'hallo world',
   }))
 
