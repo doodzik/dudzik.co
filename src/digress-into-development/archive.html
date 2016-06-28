@@ -4,11 +4,11 @@ description: The personal website of frederik dudzik
 keywords: dudzik, frederik dudzik
 redirect_from: blog/archives/index.html
 ---
-<ul class="archive">
+<ul class="posts">
   {% for post in collections['digress-into-development'] %}
     <li>
       {% if current_year | default('null') != post.date | date('Y') %}
-        <span class="date">
+        <span class="posts-seperator">
           {{ post.date | date('Y') }}
         </span>
       {% endif %}

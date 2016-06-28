@@ -19,8 +19,10 @@ var minimatch        = require("minimatch")
 var _                = require("lodash")
 
 var autoprefixer     = require('autoprefixer')
+var cssvariables = require('postcss-css-variables')
 
 var plugins = [
+  cssvariables,
   autoprefixer
 ]
 
@@ -105,7 +107,7 @@ metalsmith(__dirname)
               var url      = metalsmith.metadata().site.url + '/' + file.path
               fileNew      = _.cloneDeep(file)
               fileNew['private'] = true
-              fileNew['contents'] = new Buffer
+              fileNew['contents'] = new Buffer(
                 '<?php Header("HTTP/1.1 301 Moved Permanently");Header("Location:' + url + '");?>')
               files[filePath] = fileNew
         })

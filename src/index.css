@@ -1,11 +1,26 @@
+/************************/
+/*********Vars***********/
+/************************/
+
+:root {
+    --color-background:       #EEEEEE;
+    --color-text:             #444;
+    --color-text-unobtrusive: rgba(68, 68, 68, 0.4);
+    --color-link-hover:       #4f6eb3;
+}
+
+/************************/
+/*********RESETS*********/
+/************************/
+
 body {
   margin: 40px auto;
   max-width: 650px;
   line-height: 1.6;
   font-size: 18px;
-  color: #444;
+  color: var(--color-text);
   padding: 0 10px;
-  background: #EEEEEE;
+  background: var(--color-background);
 }
 
 ul {
@@ -24,25 +39,19 @@ a {
 }
 
 a:hover {
-  color: #4f6eb3;
+  color: var(--color-link-hover);
 }
 
-
-header h3 {
-  color: rgba(68, 68, 68, 0.4);
+hr {
+  margin: 40px 0 30px 0;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-header a {
-  text-decoration: inherit;
-}
-
-.archive a {
-  text-decoration: none;
-}
-
-.date {
-  color: rgba(68, 68, 68, 0.4);
-  font-weight: bold;
+address {
+  display: inline;
 }
 
 textarea, input[type="text"] {
@@ -57,19 +66,36 @@ textarea {
   height: 10em;
 }
 
-hr {
-  margin: 40px 0 30px 0;
-  border: 0;
-  height: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+/************************/
+/*********Header*********/
+/************************/
+
+header h3 {
+  color: var(--color-text-unobtrusive);
 }
 
+header a {
+  text-decoration: none;
+}
+
+/************************/
+/*********Footer*********/
+/************************/
+
 footer {
-  color: rgba(68, 68, 68, 0.4);
+  color: var(--color-text-unobtrusive);
   font-size: 0.85em;
 }
 
-footer address {
-  display: inline;
+/************************/
+/*********Posts**********/
+/************************/
+
+.posts a {
+  text-decoration: none;
+}
+
+.posts-seperator {
+  color: var(--color-text-unobtrusive);
+  font-weight: bold;
 }
