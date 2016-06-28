@@ -3,7 +3,7 @@ head
     title=title + ' - ' + subtitle
   else
     title=title
-  link(rel="stylesheet" href="/#{fingerprint['index.css']}")
+  link(rel="stylesheet" href=`/${fingerprint['index.css']}`)
   !=head
   meta(charset="utf-8")
   meta(name="robots" content="index,follow")

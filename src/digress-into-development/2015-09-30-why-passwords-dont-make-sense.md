@@ -1,5 +1,5 @@
 ---
-layout: post.jade
+layout: post.pug
 headline: Why Passwords don’t make sense
 date: 2015-09-30 12:05:15 +0200
 description: The personal website of frederik dudzik

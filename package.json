@@ -19,7 +19,6 @@
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "cssnano": "^3.3.2",
-    "jade": "^1.11.0",
     "lodash": "^4.13.1",
     "metalsmith": "^2.1.0",
     "metalsmith-browser-sync": "^1.1.0",
@@ -39,6 +38,7 @@
     "metalsmith-sitemap": "^1.0.0",
     "minimatch": "^3.0.2",
     "postcss-css-variables": "^0.5.1",
+    "pug": "^2.0.0-beta3",
     "swig": "^1.4.2"
   }
 }

@@ -1,5 +1,5 @@
 ---
-layout: post.jade
+layout: post.pug
 headline: "An introduction to Category Theory: Slides"
 date: 2014-12-02 16:10:55 +0100
 description: The personal website of frederik dudzik

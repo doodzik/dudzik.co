@@ -120,9 +120,9 @@ metalsmith(__dirname)
   .use(inPlace('swig'))
 
   .use(layout({
-    engine: 'jade',
+    engine: 'pug',
     partials: "partials",
-    default: 'default.jade',
+    default: 'default.pug',
     pattern: '**/**.html'
   }))
 

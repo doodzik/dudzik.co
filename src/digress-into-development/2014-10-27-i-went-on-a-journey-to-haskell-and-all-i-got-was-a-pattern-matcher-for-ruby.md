@@ -1,5 +1,5 @@
 ---
-layout: post.jade
+layout: post.pug
 headline: I went on a journey to Haskell and all I got was a pattern matcher for ruby
 date: 2014-10-27 21:46:55 +0100
 comments: true

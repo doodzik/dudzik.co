@@ -1,5 +1,5 @@
 ---
-layout: post.jade
+layout: post.pug
 headline: Say hello to Rubysierung
 date: 2014-11-16 21:59:35 +0100
 description: The personal website of frederik dudzik
