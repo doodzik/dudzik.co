@@ -51,8 +51,8 @@ metalsmith(__dirname)
       sortBy:  'timestamp',
       reverse: true
     },
-    "simplify": {
-      pattern: 'simplify/**/**.html',
+    "digress-into-minimalism": {
+      pattern: 'digress-into-minimalism/**/**.html',
       sortBy:  'timestamp',
       reverse: true
     }
@@ -77,9 +77,9 @@ metalsmith(__dirname)
                 file['collectionName'] = 'digress into development'
                 file['rssPath'] = '/atom.xml'
             }
-            else if (minimatch(filename, 'simplify/**/**')) {
-                file['collectionName'] = 'simplify'
-                file['rssPath'] = '/simplify/atom.xml'
+            else if (minimatch(filename, 'digress-into-minimalism/**/**')) {
+                file['collectionName'] = 'digress into minimalism'
+                file['rssPath'] = '/digress-into-minimalism/atom.xml'
             }
 
             // add headline metadata to index page of digress into dev
@@ -90,16 +90,16 @@ metalsmith(__dirname)
                 file['pathContent'] = '/' + first.path
                 file['collection']  = 'digress-into-development'
                 file['description'] = first.description
-                file['keywords']    = first.keywords
+                file['keywords']    = (file['keywords']) ? first.keywords : file['keywords'] + "," + first.keywords
             }
-            else if ( minimatch(filename, 'simplify/index.html') ) {
+            else if ( minimatch(filename, 'digress-into-minimalism/index.html') ) {
                 var first = metalsmith.metadata()
-                                      .collections['simplify'][0]
+                                      .collections['digress-into-minimalism'][0]
                 file['headline']    = first.headline
                 file['pathContent'] = '/' + first.path
-                file['collection']  = 'simplify'
+                file['collection']  = 'digress-into-minimalism'
                 file['description'] = first.description
-                file['keywords']    = first.keywords
+                file['keywords']    = (file['keywords']) ? first.keywords : file['keywords'] + "," + first.keywords
             } 
 
             // create a redirect_from
@@ -112,7 +112,7 @@ metalsmith(__dirname)
               var filePath = file.redirect_from.substr(0, file.redirect_from.lastIndexOf(".")) + ".php"
               var url      = metalsmith.metadata().site.url + '/' + file.path
               fileNew      = _.cloneDeep(file)
-              fileNew['private'] = true
+              fileNew['private']  = true
               fileNew['contents'] = new Buffer(
                 '<?php Header("HTTP/1.1 301 Moved Permanently");Header("Location:' + url + '");?>')
               files[filePath] = fileNew
@@ -124,32 +124,29 @@ metalsmith(__dirname)
   .use(inPlace('swig'))
 
   .use(layout({
-    engine: 'pug',
+    engine:   'pug',
     partials: "partials",
-    default: 'default.pug',
-    pattern: '**/**.html'
+    default:  'default.pug',
+    pattern:  '**/**.html'
   }))
 
   // TODO: remove this rss feed
   .use(feed({
-    collection: 'digress-into-development',
+    collection:  'digress-into-development',
     destination: 'atom.xml',
-    title: 'digress into development',
-    description: 'hallo world',
+    title:       'digress into development',
   }))
 
   .use(feed({
-    collection: 'digress-into-development',
+    collection:  'digress-into-development',
     destination: 'digress-into-development/atom.xml',
-    title: 'digress into development',
-    description: 'hallo world',
+    title:       'digress into development',
   }))
 
   .use(feed({
-    collection: 'simplify',
-    destination: 'simplify/atom.xml',
-    title: 'simplify',
-    description: 'hallo world',
+    collection:  'digress-into-minimalism',
+    destination: 'digress-into-minimalism/atom.xml',
+    title:       'digress into minimalism',
   }))
 
   // .use(formatcheck({ verbose: true }))

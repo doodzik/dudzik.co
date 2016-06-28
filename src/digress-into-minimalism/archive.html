@@ -1,0 +1,21 @@
+---
+layout:        archive.pug
+subtitle:      Archive Digress into Minimalism
+description:   Archive of Digress into Minimalism
+keywords:      dudzik, frederik dudzik, digress into minimalism, digress into minimalism archive, being a minimalist, how to become a minimalist
+---
+<ul class="posts">
+  {% for post in collections['digress-into-minimalism'] %}
+    <li>
+      {% if current_year | default('null') != post.date | date('Y') %}
+        <span class="posts-seperator">
+          {{ post.date | date('Y') }}
+        </span>
+      {% endif %}
+      {% set current_year = post.date | date('Y') %}
+      <a href="/{{ post.path }}"> 
+        <h3>{{post.headline}}</h3>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
