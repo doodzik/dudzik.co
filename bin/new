@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+BLOG=$1
+
+shift
+
+# first, strip underscores
+TITLE="$@"
+CLEAN=${TITLE//_/}
+# next, replace spaces with underscores
+CLEAN=${CLEAN// /-}
+# now, clean out anything that's not alphanumeric or an underscore
+CLEAN=${CLEAN//[^a-zA-Z0-9_]/}
+# finally, lowercase with TR
+CLEAN=`echo -n $CLEAN | tr A-Z a-z`
+
+DATE=`date +%Y-%m-%d`
+
+FILE="src/${BLOG}/${DATE}-${CLEAN}.md"
+
+METADATE=$(date '+%Y-%m-%d %T %z')
+
+META=$"---\n
+layout:        post.pug\n
+headline:      $TITLE\n
+date:          $METADATE\n
+description:   \n
+keywords:      dudzik, frederik dudzik, \n
+---\n"
+
+echo -e $META | sed -e 's/^[[:space:]]*//' >> "$FILE"
+
+vim "$FILE"

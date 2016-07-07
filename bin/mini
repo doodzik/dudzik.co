@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [[ "$1" ]]; then
+  TITLE="$@"
+  ./bin/new digress-into-minimalism $TITLE
+else
+  "no title entered"
+fi
+
