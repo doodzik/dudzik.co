@@ -3,10 +3,11 @@
 /************************/
 
 :root {
-    --color-background:       #EEEEEE;
-    --color-text:             #444;
-    --color-text-unobtrusive: rgba(68, 68, 68, 0.4);
-    --color-link-hover:       #4f6eb3;
+    --color-background:            #EEEEEE;
+    --color-text:                  #444;
+    --color-text-unobtrusive:      rgba(68, 68, 68, 0.8);
+    --color-text-unobtrusive-more: rgba(68, 68, 68, 0.4);
+    --color-link-hover:            #4f6eb3;
 }
 
 /************************/
@@ -54,13 +55,19 @@ address {
   display: inline;
 }
 
+blockquote {
+  padding: 0 15px;
+  margin: 0;
+  color: var(--color-text-unobtrusive);
+  border-left: 4px solid var(--color-text-unobtrusive-more);
+}
 
 /************************/
 /*********Header*********/
 /************************/
 
 header h3 {
-  color: var(--color-text-unobtrusive);
+  color: var(--color-text-unobtrusive-more);
 }
 
 header a {
@@ -110,7 +117,7 @@ header a {
 }
 
 .posts-seperator {
-  color: var(--color-text-unobtrusive);
+  color: var(--color-text-unobtrusive-more);
   font-weight: bold;
 }
 

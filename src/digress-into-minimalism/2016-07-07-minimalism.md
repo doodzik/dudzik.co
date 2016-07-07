@@ -5,7 +5,7 @@ date: 2016-07-07 17:58:03 +0200
 description: The definition of minimalism.
 keywords: dudzik, frederik dudzik, what is minimalism, define minimalism, definition minimalism, digress into minimalism, being a minimalist, how to become a minimalist
 ---
-A better life by constraining  yourself
+> A better life by constraining  yourself
 
 ### Conscious
 

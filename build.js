@@ -68,6 +68,7 @@ metalsmith(__dirname)
         filesToRedirectTo = []
         // remove archive from collection
         metalsmith.metadata().collections['digress-into-development'].pop()
+        metalsmith.metadata().collections['digress-into-minimalism'].pop()
 
         Object.keys(files).forEach(function (filename) {
             var file = files[filename]
