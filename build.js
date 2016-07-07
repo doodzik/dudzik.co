@@ -19,7 +19,7 @@ var minimatch        = require("minimatch")
 var _                = require("lodash")
 
 var autoprefixer     = require('autoprefixer')
-var cssvariables = require('postcss-css-variables')
+var cssvariables     = require('postcss-css-variables')
 
 var plugins = [
   cssvariables,
@@ -28,6 +28,30 @@ var plugins = [
 
 // Import metadata
 var metadata   = require('./metadata')
+
+var redirect = function(type) {
+  if (type !== "php") {
+    throw new Error("redirect type is unsupported")
+  }
+  
+  return function (files, metalsmith, done) {
+    var filenames = Object.keys(files)
+    filenames.forEach(function (filename) {
+      var file = files[filename]
+      if (!!file.redirect_from) {
+        var file     = files[filename]
+        var filePath = file.redirect_from.substr(0, file.redirect_from.lastIndexOf(".")) + ".php"
+        var url      = metalsmith.metadata().site.url + '/' + file.path
+        fileNew      = _.cloneDeep(file)
+        fileNew['private']  = true
+        fileNew['contents'] = new Buffer(
+            '<?php Header("HTTP/1.1 301 Moved Permanently");Header("Location:' + url + '");?>')
+            files[filePath] = fileNew
+      }
+    })
+    done()
+  }
+}
 
 // Build
 metalsmith(__dirname)
@@ -64,8 +88,8 @@ metalsmith(__dirname)
   }))
 
   // minimatch the filenames
+  .use(redirect('php'))
   .use(function (files, metalsmith, done) {
-        filesToRedirectTo = []
         // remove archive from collection
         metalsmith.metadata().collections['digress-into-development'].pop()
         metalsmith.metadata().collections['digress-into-minimalism'].pop()
@@ -103,22 +127,7 @@ metalsmith(__dirname)
                 file['keywords']    = (file['keywords']) ? first.keywords : file['keywords'] + "," + first.keywords
             } 
 
-            // create a redirect_from
-            if (!!file.redirect_from)
-              filesToRedirectTo.push(filename)
         })
-
-        filesToRedirectTo.forEach(function(filename) {
-              var file     = files[filename]
-              var filePath = file.redirect_from.substr(0, file.redirect_from.lastIndexOf(".")) + ".php"
-              var url      = metalsmith.metadata().site.url + '/' + file.path
-              fileNew      = _.cloneDeep(file)
-              fileNew['private']  = true
-              fileNew['contents'] = new Buffer(
-                '<?php Header("HTTP/1.1 301 Moved Permanently");Header("Location:' + url + '");?>')
-              files[filePath] = fileNew
-        })
- 
         done()
   })
 
