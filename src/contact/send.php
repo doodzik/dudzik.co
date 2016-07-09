@@ -9,8 +9,8 @@ function clean_string($string) {
 if (empty($_POST["username"]) && !empty($_POST["content"]) && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
 
   $subject = 'dudzik.co - form';
-  $message = clean_string($_POST["content"]);
   $replyTo = $_POST["email"];
+  $message = clean_string($replyTo) + "\n" + clean_string($_POST["content"]);
 
   $headers = "From: $from" . "\r\n" .
       "Reply-To: $replyTo" . "\r\n" .
