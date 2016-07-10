@@ -18,12 +18,10 @@ DATE=`date +%Y-%m-%d`
 
 FILE="src/${BLOG}/${DATE}-${CLEAN}.md"
 
-METADATE=$(date '+%Y-%m-%d %T %z')
-
 META=$"---\n
 layout:        post.pug\n
 headline:      $TITLE\n
-date:          $METADATE\n
+date:          $DATE\n
 description:   \n
 keywords:      dudzik, frederik dudzik, \n
 ---\n"

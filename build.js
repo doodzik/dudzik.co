@@ -44,12 +44,12 @@ metalsmith(__dirname)
   .use(collections({
     "digress-into-development": {
       pattern: 'digress-into-development/**/**.html',
-      sortBy:  'timestamp',
+      sortBy:  'date',
       reverse: true
     },
     "digress-into-minimalism": {
       pattern: 'digress-into-minimalism/**/**.html',
-      sortBy:  'timestamp',
+      sortBy:  'date',
       reverse: true
     }
   }))

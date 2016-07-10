@@ -1,7 +1,7 @@
 ---
 layout:        post.pug
 headline:      Say hello to Rubysierung
-date:          2014-11-16 21:59:35 +0100
+date:          2014-11-16
 description:   My take on soft typing implemented in ruby
 keywords:      dudzik, frederik dudzik, rubysierung, soft typing, ruby soft typing, ruby conversion methods, conversion methods
 redirect_from: blog/2014/11/16/say-hello-to-rubysierung/index.html
