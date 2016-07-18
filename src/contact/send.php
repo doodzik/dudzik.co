@@ -10,7 +10,7 @@ if (empty($_POST["username"]) && !empty($_POST["content"]) && filter_var($_POST[
 
   $subject = 'dudzik.co - form';
   $replyTo = $_POST["email"];
-  $message = clean_string($replyTo) + "\n" + clean_string($_POST["content"]);
+  $message = clean_string($replyTo) . "\n\n" . clean_string($_POST["content"]);
 
   $headers = "From: $from" . "\r\n" .
       "Reply-To: $replyTo" . "\r\n" .
