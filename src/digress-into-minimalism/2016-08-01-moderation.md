@@ -6,8 +6,6 @@ description: Defining the term moderation
 keywords: dudzik, frederik dudzik, Moderation, What is moderation, moderate life
 ---
 
-Moderation
-
 > inner peace through reducing excess and extremes.
 
 Behaving moderately will help you reach balance and stability in your live.
