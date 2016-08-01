@@ -62,6 +62,7 @@ metalsmith(__dirname)
   .use(redirect('php'))
   .use(archive('digress-into-development'))
   .use(firstPostAsIndex('digress-into-development'))
+
   .use(archive('digress-into-minimalism'))
   .use(firstPostAsIndex('digress-into-minimalism'))
   
