@@ -128,3 +128,8 @@ header a {
 pre {
   overflow-y: auto;
 }
+
+.post ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
