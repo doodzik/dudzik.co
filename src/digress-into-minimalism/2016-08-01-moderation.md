@@ -9,12 +9,11 @@ keywords: dudzik, frederik dudzik, Moderation, What is moderation, moderate life
 > inner peace through reducing excess and extremes.
 
 Acting moderately is a fundamental part of [minimalism](./minimalism).
-It helps you reach balance and stability.
-The following steps guide me:
+It will help you reach balance and stability.
+The following principles guide me:
 
-You are aware of your thoughts and actions. Evaluate them.
+- Awareness of thoughts and actions.
+- Openness to change.
+- Persistence.
 
-Try asking yourself: Is this behavior appropriate?
-If it isn't think about how you would like to behave instead. Find the smallest change you can make to move towards it. Don't deny yourself of too much at first. Be moderate and you won't relapse.
-
-It is OK to fail. Analyze the reason, alter your approach, and start over again. Don't let the notion of success and failure hold you back.
+Be moderate in reaching moderation. Don't deny yourself too much at first. Be prepared to start over. Don't let the notion of success and failure hold you back.
