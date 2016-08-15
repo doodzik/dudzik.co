@@ -1,7 +1,7 @@
 ---
 layout:        post.pug
 headline:      Why Passwords don’t make sense
-date:          2015-09-30 12:05:15 +0200
+date:          2015-09-30
 description:   A ranting about password. Why they don't make sense and how authentication should work.
 keywords:      dudzik, frederik dudzik, email authentication, no more password, email authentication, passwordless authentication
 redirect_from: blog/2015/09/30/why-passwords-dont-make-sense/index.html

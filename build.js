@@ -23,6 +23,9 @@ var redirect         = require('./lib/plugin/redirect')
 var firstPostAsIndex = require('./lib/plugin/first-post-as-index')
 var archive          = require('./lib/plugin/archive')
 
+// fn
+var sortDateField    = require('./lib/sort-date')
+
 var postcssPlugins   = require('./lib/postcss.js')
 
 // Build
@@ -44,12 +47,12 @@ metalsmith(__dirname)
   .use(collections({
     "digress-into-development": {
       pattern: 'digress-into-development/**/**.html',
-      sortBy:  'date',
+      sortBy:  sortDateField,
       reverse: true
     },
     "digress-into-minimalism": {
       pattern: 'digress-into-minimalism/**/**.html',
-      sortBy:  'date',
+      sortBy:  sortDateField,
       reverse: true
     }
   }))
@@ -65,7 +68,7 @@ metalsmith(__dirname)
 
   .use(archive('digress-into-minimalism'))
   .use(firstPostAsIndex('digress-into-minimalism'))
-  
+
   .use(inPlace('swig'))
 
   .use(layout({
