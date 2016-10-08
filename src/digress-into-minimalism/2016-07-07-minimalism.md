@@ -9,7 +9,7 @@ keywords: dudzik, frederik dudzik, what is minimalism, define minimalism, defini
 
 ### Conscious
 
-Aware of yourself and your surroundings. Constantly calling your thoughts and behavior into question.
+[Aware of yourself and your surroundings](./mindfulness). Constantly calling your thoughts and behavior into question.
 
 ### Purpose
 

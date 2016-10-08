@@ -12,7 +12,7 @@ Acting moderately is a fundamental part of [minimalism](./minimalism).
 It will help you reach balance and stability.
 The following principles guide me:
 
-- Awareness of thoughts and actions.
+- [Awareness of thoughts and actions](./mindfulness).
 - Openness to change.
 - Persistence.
 
