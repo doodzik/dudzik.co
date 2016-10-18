@@ -8,4 +8,4 @@ keywords: dudzik, frederik dudzik, mindfulness, what is mindfulness, why should 
 Mindfulness is the state of being conscious of yourself and your surroundings. This facilitates the awareness of your subconscious processes and gives you the ability to change them.
 
 Some practices can help you to enter the state of mindfulness more easily, like meditation, yoga and knitting.
-My personal preference is to practice a variation of [walking meditation](./commuting-meditation).
+My personal preference is to practice a variation of [walking meditation](/digress-into-minimalism/commuting-meditation).

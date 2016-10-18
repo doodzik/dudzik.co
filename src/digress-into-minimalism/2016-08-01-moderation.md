@@ -8,11 +8,11 @@ keywords: dudzik, frederik dudzik, Moderation, What is moderation, moderate life
 
 > inner peace through reducing excess and extremes.
 
-Acting moderately is a fundamental part of [minimalism](./minimalism).
+Acting moderately is a fundamental part of [minimalism](/digress-into-minimalism/minimalism).
 It will help you reach balance and stability.
 The following principles guide me:
 
-- [Awareness of thoughts and actions](./mindfulness).
+- [Awareness of thoughts and actions](/digress-into-minimalism/mindfulness).
 - Openness to change.
 - Persistence.
 
