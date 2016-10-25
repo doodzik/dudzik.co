@@ -44,4 +44,4 @@ The web isn't a GUI. You shouldn't try to emulate it. The browser has a right cl
 
 Avoid the usage of fixed elements on small devices. Users don't want to see a navigation bar or your app advertisement. They want to see the content.
 
-If you would like to make an addition to this list feel free to open a [pull request](https://github.com/doodzik/dudzik.co/blob/master/src/digress-into-development/2016-10-25-webux-patterns.md). I would appreciate it.
+If you would like to make an addition to this list feel free to open a [pull request](https://github.com/doodzik/dudzik.co/blob/master/src/digress-into-development/2016-10-25-web-ux-patterns.md). I would appreciate it.
