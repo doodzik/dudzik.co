@@ -78,6 +78,20 @@ metalsmith(__dirname)
     pattern:  '**/**.html'
   }))
 
+  // This is done so the title in the rss is set
+  // This issue arises because the title var is used in the layout
+  // And thus the actual var for the title is called headline
+  .use(function(files, matalsmith) {
+      var minimatch = require("minimatch")
+      var filenames = Object.keys(files)
+      filenames.forEach(function (filename) {
+          var file = files[filename]
+          if(typeof file.headline !== 'undefined') {
+            file.title = file.headline
+          }
+      })
+  })
+
   // TODO: remove this rss feed
   .use(feed({
     collection:  'digress-into-development',
