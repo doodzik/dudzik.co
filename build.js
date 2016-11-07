@@ -48,12 +48,18 @@ metalsmith(__dirname)
     "digress-into-development": {
       pattern: 'digress-into-development/**/**.html',
       sortBy:  sortDateField,
-      reverse: true
+      reverse: true,
+      metadata: {
+        mailingList: "http://eepurl.com/cnF9bH"
+      }
     },
     "digress-into-minimalism": {
       pattern: 'digress-into-minimalism/**/**.html',
       sortBy:  sortDateField,
-      reverse: true
+      reverse: true,
+      metadata: {
+        mailingList: "http://eepurl.com/cnGa2X"
+      }
     }
   }))
 
