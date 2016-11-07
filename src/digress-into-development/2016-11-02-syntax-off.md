@@ -12,3 +12,5 @@ Initially, turning off syntax highlighting felt weird. I couldn't skip through t
 The switch made me a big proponent of conditional highlighting. Unlike syntax highlighting, it  emphasizes only the information that is relevant at a given time. For example a syntax checker that highlights your mistakes on every file save. Because the noise of the syntax highlighting was gone the conditional highlighting was even more visible, which made it an even more effective tool.
 
 As developers we have two objectives: Building software that works and writing code that others understand. Turning off syntax highlighting can make it easier to achieve the latter, but it doesn't have to. You should decide for yourself if it belongs in your tool chain.
+
+If you are interested what people think about this article you can read its [comments on hackernews](https://news.ycombinator.com/item?id=12886067).
