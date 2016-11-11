@@ -37,10 +37,15 @@ h1, h2, h3 {
 a {
   color: inherit;
   transition: all .2s ease-in;
+  position: relative;
 }
 
 a:hover {
   color: var(--color-link-hover);
+}
+
+a:active {
+  top: 1px;
 }
 
 hr {
@@ -116,6 +121,14 @@ header a {
   text-decoration: none;
 }
 
+.posts a:visited {
+  color: purple;
+}
+
+.posts h3 {
+  display: inline-block;
+}
+
 .posts-seperator {
   color: var(--color-text-unobtrusive-more);
   font-weight: bold;
@@ -127,6 +140,10 @@ header a {
 
 pre {
   overflow-y: auto;
+}
+
+.post a:visited {
+  color: purple;
 }
 
 .post ul {

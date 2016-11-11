@@ -6,12 +6,12 @@ keywords:      dudzik, frederik dudzik, digress into minimalism, digress into mi
 ---
 <ul class="posts">
   {% for post in collections['digress-into-minimalism'] %}
+    {% if current_year | default('null') != post.date | date('Y') %}
+      <span class="posts-seperator">
+        {{ post.date | date('Y') }}
+      </span>
+    {% endif %}
     <li>
-      {% if current_year | default('null') != post.date | date('Y') %}
-        <span class="posts-seperator">
-          {{ post.date | date('Y') }}
-        </span>
-      {% endif %}
       {% set current_year = post.date | date('Y') %}
       <a href="/{{ post.path }}"> 
         <h3>{{post.headline}}</h3>
