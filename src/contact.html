@@ -3,16 +3,21 @@ subtitle:    Contact
 description: The form to contact Frederik Dudzik
 keywords:    dudzik, frederik dudzik, frederik dudzik contact, contact frederik dudzik, contact dudzik, dudzik contact
 ---
-<form method="post" action="/contact/send.php">
-
-  <label for="email">your email:</label>
-  <input type="email" name="email" class="contact-email" autofocus>
-
-  <label for="content">your message:</label>
-  <textarea name="content" class="contact-message">Hello Frederik,&#10;&#10;</textarea>
+<form name="contact" method="post" action="/contact/send.php" onsubmit="return validateForm()">
 
   <label for="username" style="display:none;">If you are human, leave this field blank (required):</label>
   <input type="text" id="username" style="display:none;" name="username">
 
+  <label for="email">Email:</label>
+  <label id="emailError" class="error">Please enter a correct Email address</label>
+  <input type="email" name="email" class="contact-email validate" autofocus>
+
+  <label for="content">your message:</label>
+  <label id="contentError" class="error">Please enter a message</label>
+  <textarea name="content" class="contact-message">Hello Frederik,&#10;&#10;</textarea>
+
   <input type="submit" id="submit" name="submit" value="send">
 </form>
+
+<script src="/{{fingerprint['contact/contact.js']}}"> </script>
+

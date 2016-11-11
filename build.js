@@ -14,6 +14,7 @@ var htmlMinifier     = require("metalsmith-html-minifier")
 var markdown         = require('metalsmith-markdownit')
 var browserSync      = require('metalsmith-browser-sync')
 var postcss          = require('metalsmith-postcss')
+var uglify           = require('metalsmith-uglify')
 
 // Import metadata
 var metadata   = require('./metadata')
@@ -37,6 +38,12 @@ metalsmith(__dirname)
   .use(postcss(postcssPlugins.default))
 
   .use(fingerprint({ pattern: 'index.css' }))
+
+  .use(If(
+    process.env.PRODUCTION,
+    uglify({filter: ['index.js']})
+  ))
+  .use(fingerprint({pattern: 'contact/contact.js'}))
 
   .use(markdown({
     typographer: true,

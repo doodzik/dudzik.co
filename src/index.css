@@ -113,6 +113,16 @@ header a {
   font-size: 1em;
 }
 
+form .error {
+  color: red;
+  display: none;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: none;
+}
+
+
 /************************/
 /*********Posts**********/
 /************************/
