@@ -73,6 +73,8 @@ blockquote {
 
 header h3 {
   color: var(--color-text-unobtrusive-more);
+  font-weight: normal;
+  padding-bottom: 0.5em;
 }
 
 header a {
@@ -85,7 +87,7 @@ header a {
 
 footer {
   color: var(--color-text-unobtrusive);
-  font-size: 0.85em;
+  font-size: 0.9em;
 }
 
 header a {
@@ -141,7 +143,11 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 .posts-seperator {
   color: var(--color-text-unobtrusive-more);
-  font-weight: bold;
+  padding-top: 2em;
+}
+
+.posts li:first-of-type {
+  padding-top: 0;
 }
 
 /************************/
