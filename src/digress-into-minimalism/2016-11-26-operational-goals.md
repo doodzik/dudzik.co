@@ -11,7 +11,7 @@ Operational goals are the tasks required to keep you as a person running. They a
 ## Health
 If I'm not healthy, I won't be able to make money
 
-### (Physical) Health
+### Physical Health
 If I don't live a healthy life, my ability to focus on my work will suffer.
 
 ### Relationships
