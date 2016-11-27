@@ -7,6 +7,8 @@ keywords: dudzik, frederik dudzik, Operational Goals, Personal Operational Goals
 ---
 
 Operational goals are the tasks required to keep you as a person running. They are individual to each person and the following categorization is specific to me. It can and probably will look different for you. The important thing is to be aware of your needs and to satisfy them.
+
+<br/>
  
 ## Health
 If I'm not healthy, I won't be able to make money
@@ -19,6 +21,8 @@ If I neglect my Relationships, my emotional health will suffer.
 
 ### Home
 If I don't feel comfortable at home, I won't be able recover from work appropriately.
+
+<br/>
 
 ## Money
 If I don't have money, it will be hard to live a healthy life
