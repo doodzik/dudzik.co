@@ -20,7 +20,7 @@ FILE="src/${BLOG}/${DATE}-${CLEAN}.md"
 
 META=$"---\n
 layout:        post.pug\n
-headline:      $TITLE\n
+headline:      \"$TITLE\"\n
 date:          $DATE\n
 description:   \n
 keywords:      dudzik, frederik dudzik, \n
