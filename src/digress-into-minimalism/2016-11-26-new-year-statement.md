@@ -22,4 +22,4 @@ After all the planning, don’t forget to execute!
 
 ## New Year Statements
 
-2017 - The year of focus (published soon)
+* [2017 - The year of focus](/digress-into-minimalism/2017-the-year-of-focus)
