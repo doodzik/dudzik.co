@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "eslint . --fix --ignore-path .gitignore -c .eslintrc.production.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,8 @@
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "cssnano": "^3.3.2",
+    "eslint": "^3.14.1",
+    "husky": "^0.13.1",
     "lodash": "^4.13.1",
     "metalsmith": "^2.1.0",
     "metalsmith-browser-sync": "^1.1.0",

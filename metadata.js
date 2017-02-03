@@ -1,6 +1,6 @@
 module.exports = {
-  "title": "Frederik Dudzik",
-  "site": {
-    "url": "http://dudzik.co"
-  }
+	'title': 'Frederik Dudzik',
+	'site': {
+		'url': 'http://dudzik.co'
+	}
 }

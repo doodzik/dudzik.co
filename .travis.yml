@@ -6,12 +6,10 @@ addons:
     packages:
     - ncftp
 script:
+- npm run precommit
 - make build
 after_success:
-- ./deploy.sh
-branches:
-  only:
-    - master
+- if [ "$TRAVIS_BRANCH" == "master" ]; then ./deploy.sh; fi
 env:
     global:
       - secure: "IyB16lLUqGxpLytm4jW/3uBIAqML2ibdAgBYzt8VsIJdRs8KF5XYSg7wWGZsiNePeegZ9ZDRYAGpJ2Pcz3tCiZSQRwS/We3/QCFzEDZ4bpQT687V1kE5Q3T6FVULaRnmjNZYgl6Eu7JeK5NTlm7U5explVfWi40bdXxLuhABcsqMyh409+8QRS/CUKkWLll2EM54exUmcHEjouxHrIEvxWGfuAkOQN/XT+u/w2uXJ8A3Zq5F8EYHdMG7vccE1XYopHPKFeqRnjW77DRprqj++RnslSo/yf9UyhAWDDvy4tGEC0uRCAjPuzU0cMDxsHT3vU03Wsn+kl23O2YT91ZuTDjE64tPFLclnlF8fe2vf02RsnnNjBg6mv3S52wtDB8d9fZkyGdzo69uwvGDzCwRioIm+6HT375gQjgZnNmFCG7OPrTFC3dfVsp0dQXjAP9J7LHM/VVfCauqRzjj9vrk34b3Y53ix4hV7X5s3JpAGEtbWU5BpLefHkZfTBRXwTtNR62rO9/1eD3h5wrLpdwGCPKFWPUIgc3igoBHdDbQi8Y6u6xSeHLOt8CamqAE7nIUjKnqhNA0wS31KuOgmvXDeFqYbUJUmz8FJPSD88X6oWrNjDVwWEePR9UrXBimdrQurve7Tc9w0bkcSDRtuOL16gLzOmPuYN+NKnGEhSycspQ="

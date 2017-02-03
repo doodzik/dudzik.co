@@ -6,11 +6,11 @@ var layout           = require('metalsmith-layouts')
 var collections      = require('metalsmith-collections')
 var permalinks       = require('metalsmith-permalinks')
 var sitemap          = require('metalsmith-sitemap')
-var linkcheck        = require('metalsmith-linkcheck')
+// var linkcheck        = require('metalsmith-linkcheck')
 var If               = require('metalsmith-if')
 var compress         = require('metalsmith-gzip')
-var formatcheck      = require('metalsmith-formatcheck')
-var htmlMinifier     = require("metalsmith-html-minifier")
+// var formatcheck      = require('metalsmith-formatcheck')
+var htmlMinifier     = require('metalsmith-html-minifier')
 var markdown         = require('metalsmith-markdownit')
 var browserSync      = require('metalsmith-browser-sync')
 var postcss          = require('metalsmith-postcss')
@@ -46,34 +46,34 @@ metalsmith(__dirname)
   .use(fingerprint({pattern: 'contact/contact.js'}))
 
   .use(markdown({
-    typographer: true,
-    linkify: true,
-    html: true
-  }))
+	typographer: true,
+	linkify: true,
+	html: true
+}))
 
   .use(collections({
-    "digress-into-development": {
-      pattern: 'digress-into-development/**/**.html',
-      sortBy:  sortDateField,
-      reverse: true,
-      metadata: {
-        mailingList: "http://eepurl.com/cnF9bH"
-      }
-    },
-    "digress-into-minimalism": {
-      pattern: 'digress-into-minimalism/**/**.html',
-      sortBy:  sortDateField,
-      reverse: true,
-      metadata: {
-        mailingList: "http://eepurl.com/cnGa2X"
-      }
-    }
-  }))
+	'digress-into-development': {
+		pattern: 'digress-into-development/**/**.html',
+		sortBy:  sortDateField,
+		reverse: true,
+		metadata: {
+			mailingList: 'http://eepurl.com/cnF9bH'
+		}
+	},
+	'digress-into-minimalism': {
+		pattern: 'digress-into-minimalism/**/**.html',
+		sortBy:  sortDateField,
+		reverse: true,
+		metadata: {
+			mailingList: 'http://eepurl.com/cnGa2X'
+		}
+	}
+}))
 
   .use(permalinks({
-      relative: false,
-      pattern: ':collection/:headline'
-  }))
+	relative: false,
+	pattern: ':collection/:headline'
+}))
 
   .use(redirect('php'))
   .use(archive('digress-into-development'))
@@ -85,44 +85,43 @@ metalsmith(__dirname)
   .use(inPlace('swig'))
 
   .use(layout({
-    engine:   'pug',
-    partials: "partials",
-    default:  'default.pug',
-    pattern:  '**/**.html'
-  }))
+	engine:   'pug',
+	partials: 'partials',
+	default:  'default.pug',
+	pattern:  '**/**.html'
+}))
 
-  // This is done so the title in the rss is set
-  // This issue arises because the title var is used in the layout
-  // And thus the actual var for the title is called headline
-  .use(function(files, matalsmith) {
-      var minimatch = require("minimatch")
-      var filenames = Object.keys(files)
-      filenames.forEach(function (filename) {
-          var file = files[filename]
-          if(typeof file.headline !== 'undefined') {
-            file.title = file.headline
-          }
-      })
-  })
+// This is done so the title in the rss is set
+// This issue arises because the title var is used in the layout
+// And thus the actual var for the title is called headline
+.use(function(files) {
+	var filenames = Object.keys(files)
+	filenames.forEach(function (filename) {
+		var file = files[filename]
+		if(typeof file.headline !== 'undefined') {
+			file.title = file.headline
+		}
+	})
+})
 
   // TODO: remove this rss feed
   .use(feed({
-    collection:  'digress-into-development',
-    destination: 'atom.xml',
-    title:       'digress into development',
-  }))
+	collection:  'digress-into-development',
+	destination: 'atom.xml',
+	title:       'digress into development',
+}))
 
   .use(feed({
-    collection:  'digress-into-development',
-    destination: 'digress-into-development/atom.xml',
-    title:       'digress into development',
-  }))
+	collection:  'digress-into-development',
+	destination: 'digress-into-development/atom.xml',
+	title:       'digress into development',
+}))
 
   .use(feed({
-    collection:  'digress-into-minimalism',
-    destination: 'digress-into-minimalism/atom.xml',
-    title:       'digress into minimalism',
-  }))
+	collection:  'digress-into-minimalism',
+	destination: 'digress-into-minimalism/atom.xml',
+	title:       'digress into minimalism',
+}))
 
   // .use(formatcheck({ verbose: true }))
   .use(sitemap({ hostname: 'http://dudzik.co' }))
@@ -131,10 +130,10 @@ metalsmith(__dirname)
     !process.env.PRODUCTION,
     // Serve and watch for changes
     browserSync({
-      server : '.tmp',
-      files : []
+	server : '.tmp',
+	files : []
       // files : ['src/**/*', 'layouts/**/*']
-    })
+})
   ))
 
   .use(If(
@@ -153,5 +152,5 @@ metalsmith(__dirname)
   ))
 
   .build(function(err){
-    if (err) throw err
-  })
+	if (err) throw err
+})
