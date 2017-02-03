@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "precommit": "eslint . --fix --ignore-path .gitignore -c .eslintrc.production.js"
+    "test": "eslint . --fix --ignore-path .gitignore -c .eslintrc.js && npm run lintwriting",
+    "precommit": "eslint . --fix --ignore-path .gitignore -c .eslintrc.production.js && npm run lintwriting",
+    "lintwriting": "git diff --cached --name-only | grep md$ | xargs proselint"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/doodzik/Haeckerpl.git"
   },
-  "author": "",
+  "author": "Frederik Dudzik",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/doodzik/Haeckerpl/issues"
