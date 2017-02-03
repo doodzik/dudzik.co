@@ -15,7 +15,7 @@ script:
 - npm run precommit
 - make build
 after_success:
-- if [ "$TRAVIS_BRANCH" == "master" ]; then ./deploy.sh; fi
+- if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" = false ]; then ./deploy.sh; fi
 env:
   global:
   - NODE_VERSION="5.7"
