@@ -35,6 +35,14 @@ metalsmith(__dirname)
 
 .metadata(metadata)
 
+.use(function(files) {
+	var filenames = Object.keys(files)
+	filenames.forEach(function (filename) {
+		var file = files[filename]
+    file["pathOriginal"] = filename
+  })
+})
+
 .use(postcss(postcssPlugins.default))
 
 .use(fingerprint({ pattern: 'index.css' }))
