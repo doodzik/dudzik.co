@@ -80,6 +80,10 @@ header a {
   text-decoration: none;
 }
 
+header a {
+  text-decoration: none;
+}
+
 /************************/
 /*********Footer*********/
 /************************/
@@ -87,10 +91,6 @@ header a {
 footer {
   color: var(--color-text-unobtrusive);
   font-size: 0.9em;
-}
-
-header a {
-  text-decoration: none;
 }
 
 /************************/
