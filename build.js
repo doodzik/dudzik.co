@@ -39,8 +39,8 @@ metalsmith(__dirname)
 	var filenames = Object.keys(files)
 	filenames.forEach(function (filename) {
 		var file = files[filename]
-    file["pathOriginal"] = filename
-  })
+		file['pathOriginal'] = filename
+	})
 })
 
 .use(postcss(postcssPlugins.default))
