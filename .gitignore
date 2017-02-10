@@ -40,3 +40,4 @@ jspm_packages
 .tmp
 .format_checked.json
 format_failed.json
+.links_checked.json

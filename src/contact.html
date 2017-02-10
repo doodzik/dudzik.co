@@ -9,12 +9,12 @@ keywords:    dudzik, frederik dudzik, frederik dudzik contact, contact frederik 
   <input type="text" id="username" style="display:none;" name="username">
 
   <label for="email">Email:</label>
-  <label id="emailError" class="error">Please enter a correct Email address</label>
-  <input type="email" name="email" class="contact-email validate" autofocus>
+  <label id="emailError" for="email" class="error">Please enter a correct Email address</label>
+  <input type="email" name="email" id="email" class="contact-email validate" autofocus>
 
   <label for="content">your message:</label>
-  <label id="contentError" class="error">Please enter a message</label>
-  <textarea name="content" class="contact-message">Hello Frederik,&#10;&#10;</textarea>
+  <label for="content" id="contentError" class="error">Please enter a message</label>
+  <textarea name="content" class="contact-message" id="content">Hello Frederik,&#10;&#10;</textarea>
 
   <input type="submit" id="submit" name="submit" value="send">
 </form>

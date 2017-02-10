@@ -9,7 +9,7 @@ var sitemap          = require('metalsmith-sitemap')
 var linkcheck        = require('metalsmith-linkcheck')
 var If               = require('metalsmith-if')
 var compress         = require('metalsmith-gzip')
-// var formatcheck      = require('metalsmith-formatcheck')
+var formatcheck      = require('metalsmith-formatcheck')
 var htmlMinifier     = require('metalsmith-html-minifier')
 var markdown         = require('metalsmith-markdownit')
 var browserSync      = require('metalsmith-browser-sync')
@@ -123,7 +123,7 @@ metalsmith(__dirname)
 	title:       'digress into minimalism',
 }))
 
-  // .use(formatcheck({ verbose: true }))
+.use(formatcheck({ verbose: true }))
 .use(sitemap({ hostname: 'http://dudzik.co' }))
 .use(linkcheck({failMissing: true}))
 
@@ -153,6 +153,6 @@ metalsmith(__dirname)
 ))
 
 .build(function(err){
-  if (err) throw err
+	if (err) throw err
 })
 
