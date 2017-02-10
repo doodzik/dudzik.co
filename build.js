@@ -6,7 +6,7 @@ var layout           = require('metalsmith-layouts')
 var collections      = require('metalsmith-collections')
 var permalinks       = require('metalsmith-permalinks')
 var sitemap          = require('metalsmith-sitemap')
-// var linkcheck        = require('metalsmith-linkcheck')
+var linkcheck        = require('metalsmith-linkcheck')
 var If               = require('metalsmith-if')
 var compress         = require('metalsmith-gzip')
 // var formatcheck      = require('metalsmith-formatcheck')
@@ -31,27 +31,27 @@ var postcssPlugins   = require('./lib/postcss.js')
 
 // Build
 metalsmith(__dirname)
-  .destination('.tmp')
+.destination('.tmp')
 
-  .metadata(metadata)
+.metadata(metadata)
 
-  .use(postcss(postcssPlugins.default))
+.use(postcss(postcssPlugins.default))
 
-  .use(fingerprint({ pattern: 'index.css' }))
+.use(fingerprint({ pattern: 'index.css' }))
 
-  .use(If(
-    process.env.PRODUCTION,
-    uglify({filter: ['index.js']})
-  ))
-  .use(fingerprint({pattern: 'contact/contact.js'}))
+.use(If(
+  process.env.PRODUCTION,
+  uglify({filter: ['index.js']})
+))
+.use(fingerprint({pattern: 'contact/contact.js'}))
 
-  .use(markdown({
+.use(markdown({
 	typographer: true,
 	linkify: true,
 	html: true
 }))
 
-  .use(collections({
+.use(collections({
 	'digress-into-development': {
 		pattern: 'digress-into-development/**/**.html',
 		sortBy:  sortDateField,
@@ -70,21 +70,21 @@ metalsmith(__dirname)
 	}
 }))
 
-  .use(permalinks({
+.use(permalinks({
 	relative: false,
 	pattern: ':collection/:headline'
 }))
 
-  .use(redirect('php'))
-  .use(archive('digress-into-development'))
-  .use(firstPostAsIndex('digress-into-development'))
+.use(redirect('php'))
+.use(archive('digress-into-development'))
+.use(firstPostAsIndex('digress-into-development'))
 
-  .use(archive('digress-into-minimalism'))
-  .use(firstPostAsIndex('digress-into-minimalism'))
+.use(archive('digress-into-minimalism'))
+.use(firstPostAsIndex('digress-into-minimalism'))
 
-  .use(inPlace('swig'))
+.use(inPlace('swig'))
 
-  .use(layout({
+.use(layout({
 	engine:   'pug',
 	partials: 'partials',
 	default:  'default.pug',
@@ -104,29 +104,30 @@ metalsmith(__dirname)
 	})
 })
 
-  // TODO: remove this rss feed
-  .use(feed({
+// TODO: remove this rss feed
+.use(feed({
 	collection:  'digress-into-development',
 	destination: 'atom.xml',
 	title:       'digress into development',
 }))
 
-  .use(feed({
+.use(feed({
 	collection:  'digress-into-development',
 	destination: 'digress-into-development/atom.xml',
 	title:       'digress into development',
 }))
 
-  .use(feed({
+.use(feed({
 	collection:  'digress-into-minimalism',
 	destination: 'digress-into-minimalism/atom.xml',
 	title:       'digress into minimalism',
 }))
 
   // .use(formatcheck({ verbose: true }))
-  .use(sitemap({ hostname: 'http://dudzik.co' }))
+.use(sitemap({ hostname: 'http://dudzik.co' }))
+.use(linkcheck({failMissing: true}))
 
-  .use(If(
+.use(If(
     !process.env.PRODUCTION,
     // Serve and watch for changes
     browserSync({
@@ -136,21 +137,22 @@ metalsmith(__dirname)
 })
   ))
 
-  .use(If(
-    process.env.PRODUCTION,
-    htmlMinifier()
-  ))
+.use(If(
+  process.env.PRODUCTION,
+  htmlMinifier()
+))
 
-  .use(If(
-    process.env.PRODUCTION,
-    postcss(postcssPlugins.production)
-  ))
+.use(If(
+  process.env.PRODUCTION,
+  postcss(postcssPlugins.production)
+))
 
-  .use(If(
-    process.env.PRODUCTION,
-    compress()
-  ))
+.use(If(
+  process.env.PRODUCTION,
+  compress()
+))
 
-  .build(function(err){
-	if (err) throw err
+.build(function(err){
+  if (err) throw err
 })
+
