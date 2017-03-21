@@ -10,21 +10,22 @@ make install
 
 ## Usage
 
-to serve the website localy
+serve the website localy
 ```
 $ make
 ```
 
-to build the website
+build the website
 ```
 $ make build
 ```
 
-to add a new post
+add a new minimalism post
 ```
-$ cd dudzik.co
-# for a minimalism post
-$ ./bin/mini $TITLE
-# for a development post
-$ ./bin/dev $TITLE
+$ make mini TITLE="mini"
+```
+
+add a new development post
+```
+$ make dev TITLE="dev"
 ```
