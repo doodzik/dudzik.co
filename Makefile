@@ -7,4 +7,8 @@ build: clean
 clean:
 	rm -rf .tmp
 
+install:
+	pip install -r requirements.txt
+	npm install
+
 .PHONY: serve serve clean
