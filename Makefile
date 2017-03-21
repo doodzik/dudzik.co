@@ -1,3 +1,4 @@
+
 serve: clean
 	node build.js
 
@@ -11,4 +12,11 @@ install:
 	pip install -r requirements.txt
 	npm install
 
-.PHONY: serve serve clean
+mini:
+	./bin/mini ${TITLE}
+
+dev:
+	./bin/dev ${TITLE}
+
+.PHONY: serve clean install build mini dev
+
