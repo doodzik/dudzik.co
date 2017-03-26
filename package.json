@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "eslint . --fix --ignore-path .gitignore -c .eslintrc.js && npm run lintwriting",
-    "precommit": "eslint . --fix --ignore-path .gitignore -c .eslintrc.production.js",
+    "precommit": "eslint . --fix --ignore-path .gitignore -c .eslintrc.production.js && npm run lintwriting",
     "lintwriting": "git diff --cached --name-only | grep md$ | xargs proselint"
   },
   "repository": {
