@@ -1,13 +1,18 @@
 ---
 description: The personal website of Frederik Dudzik
-keywords:    dudzik, frederik dudzik, digress into development, simplify my life
+keywords:    dudzik, frederik dudzik, digress into development
 ---
 Hello World,
 
-My name is Frederik. I'm living and studying in Berlin.
-I spend most of my time developing software. The vast majority of what I create is [Open Source](https://github.com/doodzik). 
-I really like to [digress into development](/digress-into-development) and learn about new concepts and technologies.
+My name is Frederik Dudzik and I'm a software engineer from Germany.  
+Feel free to [contact me](/contact), and checkout my side projects.
 
-I would be happy to [hear back from you](/contact).
+</br>
 
-Frederik Dudzik
+<!-- Blog -->
+* [digress into development](/digress-into-development)
+<!-- Closed Source -->
+* [about:blank](/about:blank)
+<!-- Random -->
+* [Open Source](https://github.com/doodzik)
+* [321157](https://www.youtube.com/channel/UCxn7NPh14hNmQC8YqMr2Urg)

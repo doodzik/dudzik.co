@@ -165,3 +165,21 @@ pre {
   list-style-type: disc;
   list-style-position: inside;
 }
+
+/************************/
+/******about:blank*******/
+/************************/
+
+.about-blank-header {
+  font-family: "courier new";
+}
+
+.about-blank-header-easter-egg:link,
+.about-blank-header-easter-egg:visited,
+.about-blank-header-easter-egg:hover,
+.about-blank-header-easter-egg:active {
+  text-decoration: none;  
+  color: var(--color-text);
+  cursor: default;
+}
+
