@@ -12,7 +12,7 @@ Feel free to [contact me](/contact), and checkout my side projects.
 <!-- Blog -->
 * [digress into development](/digress-into-development)
 <!-- Closed Source -->
-* [about:blank](/about:blank)
+<!-- * [about:blank](/about:blank) -->
 <!-- Random -->
 * [Open Source](https://github.com/doodzik)
-* [321157](https://www.youtube.com/channel/UCxn7NPh14hNmQC8YqMr2Urg)
+<!-- * [321157](https://www.youtube.com/channel/UCxn7NPh14hNmQC8YqMr2Urg) -->
