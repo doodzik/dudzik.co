@@ -1,5 +1,18 @@
 ---
-layout: post.pug
+description: digress into development is Frederik Dudzik's software development blog
 keywords: software development, digress into development, frederik dudzik, dudzik 
 ---
-{{ collections['digress-into-development'][0].contents | safe }}
+<p>Hello World,</p>
+
+<p>My name is <a href="https://dudzik.co">Frederik</a> and <a href="https://dudzik.co/digress-into-development">digress into development</a> is a blog where I write about software development related topics.</p>
+
+</br>
+
+<ul>
+  <li><a href="{{ collections['digress-into-development'][0].pathContent }}">Latest Post</a></li>
+  <li><a href="./archive">Archive</a></li>
+  <li><a href="https://github.com/doodzik/dudzik.co/tree/master/src/digress-into-development">Source Code</a></li>
+  <li><a href="/{{ collection }}/atom.xml">RSS Feed</a></li>
+  <li><a href="{{mailingList}}">Mailing List</a></li>
+</ul>
+
