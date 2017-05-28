@@ -4,29 +4,10 @@ html(lang="en")
   body
     header
       h3
-        a(href="/" + collection + "/archive")=collectionName
+        a(href="/" + collection)=collectionName
       h1
         a(href=pathContent)
           = headline
 
     #contents.post!=contents
     
-    hr
-
-    footer
-      | My name is&nbsp;
-      address
-        a(href="/" rel="author") Frederik Dudzik
-      | . Feel free to submit changes to&nbsp;
-      a(href= "https://github.com/doodzik/dudzik.co/tree/master/src/" + pathOriginal) this article
-      | ,&nbsp;
-      a(href="/contact") contact me
-      | &nbsp; or to check out my&nbsp;
-      a(href= "/" + collection + "/archive") other posts
-      | .
-      br
-      | You can follow #{collectionName} through&nbsp;
-      a(href= "/" + collection + "/atom.xml") rss
-      | &nbsp;or its&nbsp;
-      a(href=mailingList) mailing list
-      | .
