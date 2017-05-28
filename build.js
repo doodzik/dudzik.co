@@ -6,9 +6,8 @@ var layout           = require('metalsmith-layouts')
 var collections      = require('metalsmith-collections')
 var permalinks       = require('metalsmith-permalinks')
 var sitemap          = require('metalsmith-sitemap')
-// These are commented out as they break the build for new articles
-// var linkcheck        = require('metalsmith-linkcheck')
-// var formatcheck      = require('metalsmith-formatcheck')
+var linkcheck        = require('metalsmith-linkcheck')
+var formatcheck      = require('metalsmith-formatcheck')
 var compress         = require('metalsmith-gzip')
 var If               = require('metalsmith-if')
 var htmlMinifier     = require('metalsmith-html-minifier')
@@ -132,9 +131,9 @@ metalsmith(__dirname)
 	title:       'digress into minimalism',
 }))
 
-// .use(formatcheck({ verbose: true }))
+.use(formatcheck({ verbose: true }))
 .use(sitemap({ hostname: 'http://dudzik.co' }))
-// .use(linkcheck({failMissing: true}))
+.use(linkcheck({failMissing: true}))
 
 .use(If(
     !process.env.PRODUCTION,
