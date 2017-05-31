@@ -12,6 +12,7 @@ Feel free to [contact me](/contact).
 <!-- Blog -->
 * [digress into development](/digress-into-development)
 <!-- Closed Source -->
+<!-- * [dask](https://itunes.apple.com/app/id1239207207) -->
 * [about:blank](/about:blank)
 <!-- Random -->
 * [Open Source](https://github.com/doodzik)
