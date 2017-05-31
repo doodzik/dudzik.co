@@ -1,8 +1,8 @@
 ---
-subtitle: dask - Terms of Use
+subtitle: dask - Privacy Policy
 description: Terms of Use for the dask app
-head: <meta name="robots" content="noindex" />
-keywords: 
+head: "<meta name='robots' content='noindex' />"
+keywords: "dask Privacy Policy"
 ---
 # Dask's Privacy Policy
 
