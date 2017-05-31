@@ -5,7 +5,7 @@ keywords:    dudzik, frederik dudzik, digress into development
 Hello World,
 
 My name is Frederik Dudzik and I'm a software engineer from Germany.  
-Feel free to [contact me](/contact), and checkout my side projects.
+Feel free to [contact me](/contact).
 
 <br/>
 
