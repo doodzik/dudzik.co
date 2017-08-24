@@ -31,136 +31,136 @@ var postcssPlugins   = require('./lib/postcss.js')
 
 // Build
 metalsmith(__dirname)
-.destination('.tmp')
+	.destination('.tmp')
 
-.metadata(metadata)
+	.metadata(metadata)
 
-.use(function(files) {
-	var filenames = Object.keys(files)
-	filenames.forEach(function (filename) {
-		var file = files[filename]
-		file['pathOriginal'] = filename
+	.use(function(files) {
+		var filenames = Object.keys(files)
+		filenames.forEach(function (filename) {
+			var file = files[filename]
+			file['pathOriginal'] = filename
+		})
 	})
-})
 
-.use(postcss(postcssPlugins.default))
+	.use(postcss(postcssPlugins.default))
 
-.use(fingerprint({ pattern: 'index.css' }))
+	.use(fingerprint({ pattern: 'index.css' }))
 
-.use(If(
-  process.env.PRODUCTION,
-  uglify({filter: ['index.js']})
-))
-.use(fingerprint({pattern: 'contact/contact.js'}))
+	.use(If(
+		process.env.PRODUCTION,
+		uglify({filter: ['index.js']})
+	))
+	.use(fingerprint({pattern: 'contact/contact.js'}))
 
-.use(markdown({
-	typographer: true,
-	linkify: true,
-	html: true
-}).use(require('markdown-it-footnote')))
+	.use(markdown({
+		typographer: true,
+		linkify: true,
+		html: true
+	}).use(require('markdown-it-footnote')))
 
-.use(collections({
-	'digress-into-development': {
-		pattern: 'digress-into-development/**/**.html',
-		sortBy:  sortDateField,
-		reverse: true,
-		metadata: {
-			mailingList: 'http://eepurl.com/cnF9bH'
+	.use(collections({
+		'digress-into-development': {
+			pattern: 'digress-into-development/**/**.html',
+			sortBy:  sortDateField,
+			reverse: true,
+			metadata: {
+				mailingList: 'http://eepurl.com/cnF9bH'
+			}
+		},
+		'digress-into-minimalism': {
+			pattern: 'digress-into-minimalism/**/**.html',
+			sortBy:  sortDateField,
+			reverse: true,
+			metadata: {
+				mailingList: 'http://eepurl.com/cnGa2X'
+			}
 		}
-	},
-	'digress-into-minimalism': {
-		pattern: 'digress-into-minimalism/**/**.html',
-		sortBy:  sortDateField,
-		reverse: true,
-		metadata: {
-			mailingList: 'http://eepurl.com/cnGa2X'
-		}
-	}
-}))
+	}))
 
-.use(permalinks({
-	relative: false,
-	pattern: ':collection/:headline'
-}))
+	.use(permalinks({
+		relative: false,
+		pattern: ':collection/:headline'
+	}))
 
-.use(redirect('php'))
-.use(archive('digress-into-development'))
-.use(firstPostAsIndex('digress-into-development'))
+	.use(redirect('php'))
+	.use(archive('digress-into-development'))
+	.use(firstPostAsIndex('digress-into-development'))
 
-.use(archive('digress-into-minimalism'))
-.use(firstPostAsIndex('digress-into-minimalism'))
+	.use(archive('digress-into-minimalism'))
+	.use(firstPostAsIndex('digress-into-minimalism'))
 
-.use(inPlace('swig'))
+	.use(inPlace('swig'))
 
-.use(layout({
-	engine:   'pug',
-	partials: 'partials',
-	default:  'default.pug',
-	pattern:  '**/**.html'
-}))
+	.use(layout({
+		engine:   'pug',
+		partials: 'partials',
+		default:  'default.pug',
+		pattern:  '**/**.html'
+	}))
 
 // This is done so the title in the rss is set
 // This issue arises because the title var is used in the layout
 // And thus the actual var for the title is called headline
-.use(function(files) {
-	var filenames = Object.keys(files)
-	filenames.forEach(function (filename) {
-		var file = files[filename]
-		if(typeof file.headline !== 'undefined') {
-			file.title = file.headline
-		}
+	.use(function(files) {
+		var filenames = Object.keys(files)
+		filenames.forEach(function (filename) {
+			var file = files[filename]
+			if(typeof file.headline !== 'undefined') {
+				file.title = file.headline
+			}
+		})
 	})
-})
 
 // TODO: remove this rss feed
-.use(feed({
-	collection:  'digress-into-development',
-	destination: 'atom.xml',
-	title:       'digress into development',
-}))
+	.use(feed({
+		collection:  'digress-into-development',
+		destination: 'atom.xml',
+		title:       'digress into development',
+	}))
 
-.use(feed({
-	collection:  'digress-into-development',
-	destination: 'digress-into-development/atom.xml',
-	title:       'digress into development',
-}))
+	.use(feed({
+		collection:  'digress-into-development',
+		destination: 'digress-into-development/atom.xml',
+		title:       'digress into development',
+	}))
 
-.use(feed({
-	collection:  'digress-into-minimalism',
-	destination: 'digress-into-minimalism/atom.xml',
-	title:       'digress into minimalism',
-}))
+	.use(feed({
+		collection:  'digress-into-minimalism',
+		destination: 'digress-into-minimalism/atom.xml',
+		title:       'digress into minimalism',
+	}))
 
-.use(formatcheck({ verbose: true }))
-.use(sitemap({ hostname: 'http://dudzik.co' }))
-.use(linkcheck({failMissing: true}))
+	.use(formatcheck({ verbose: true }))
+	.use(sitemap({ hostname: 'http://dudzik.co' }))
+	.use(linkcheck({failMissing: true}))
 
-.use(If(
-    !process.env.PRODUCTION,
-    // Serve and watch for changes
-    browserSync({
-	server : '.tmp',
-	files : []
-      // files : ['src/**/*', 'layouts/**/*']
-})
-  ))
+	.use(If(
+		!process.env.PRODUCTION,
+		// Serve and watch for changes
+		browserSync({
+			server : '.tmp',
+			files : []
+			// files : ['src/**/*', 'layouts/**/*']
+		})
+	))
 
-.use(If(
-  process.env.PRODUCTION,
-  htmlMinifier()
-))
+	.use(If(
+		process.env.PRODUCTION,
+		htmlMinifier()
+	))
 
-.use(If(
-  process.env.PRODUCTION,
-  postcss(postcssPlugins.production)
-))
+	.use(If(
+		process.env.PRODUCTION,
+		postcss(postcssPlugins.production)
+	))
 
-.use(If(
-  process.env.PRODUCTION,
-  compress()
-))
+	.use(If(
+		process.env.PRODUCTION,
+		compress()
+	))
 
-.build(function(err){
-	if (err) throw err
-})
+	.build(function(err){
+		if (err) throw err
+	})
 

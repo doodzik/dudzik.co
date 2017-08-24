@@ -26,9 +26,7 @@ function validateForm() {
 		}
 	}
 
-	validate('emailError', (email.value == null || 
-                          email.value.trim() === '')  || 
-                          !validateEmail(email.value))
+	validate('emailError', (email.value == null || email.value.trim() === '') || !validateEmail(email.value))
 	validate('contentError', (content.value == null || content.value.trim() === ''))
 
 	return returnValue

@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/doodzik/Haeckerpl.git"
+    "url": "git+https://github.com/doodzik/dudzik.co.git"
   },
   "author": "Frederik Dudzik",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/doodzik/Haeckerpl/issues"
+    "url": "https://github.com/doodzik/dudzik.co/issues"
   },
-  "homepage": "https://github.com/doodzik/Haeckerpl#readme",
+  "homepage": "https://github.com/doodzik/dudzik.co#readme",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "cssnano": "^3.3.2",
