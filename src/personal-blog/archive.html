@@ -1,0 +1,23 @@
+---
+layout:        archive.pug
+subtitle:      Archive Personal Blog
+description:   Archive of Frederik Dudzik's Personal Blog
+keywords:      dudzik, frederik dudzik
+---
+<ul class="posts">
+  {% for post in collections['personal-blog'] %}
+    {% if current_year | default('null') != post.date | date('Y') %}
+      <li class="posts-seperator">
+        <span>
+          {{ post.date | date('Y') }}
+        </span>
+      </li>
+    {% endif %}
+    <li>
+      {% set current_year = post.date | date('Y') %}
+      <a href="/{{ post.path }}"> 
+        <h3>{{post.headline}}</h3>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

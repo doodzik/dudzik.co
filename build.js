@@ -6,8 +6,9 @@ var layout           = require('metalsmith-layouts')
 var collections      = require('metalsmith-collections')
 var permalinks       = require('metalsmith-permalinks')
 var sitemap          = require('metalsmith-sitemap')
-var linkcheck        = require('metalsmith-linkcheck')
-var formatcheck      = require('metalsmith-formatcheck')
+// TODO reenable after push
+// var linkcheck     = require('metalsmith-linkcheck')
+// var formatcheck   = require('metalsmith-formatcheck')
 var compress         = require('metalsmith-gzip')
 var If               = require('metalsmith-if')
 var htmlMinifier     = require('metalsmith-html-minifier')
@@ -68,6 +69,14 @@ metalsmith(__dirname)
 				mailingList: 'http://eepurl.com/cnF9bH'
 			}
 		},
+		'personal-blog': {
+			pattern: 'personal-blog/**/**.html',
+			sortBy:  sortDateField,
+			reverse: true,
+			metadata: {
+				mailingList: 'http://eepurl.com/cnGa2X'
+			}
+		},
 		'digress-into-minimalism': {
 			pattern: 'digress-into-minimalism/**/**.html',
 			sortBy:  sortDateField,
@@ -86,6 +95,9 @@ metalsmith(__dirname)
 	.use(redirect('php'))
 	.use(archive('digress-into-development'))
 	.use(firstPostAsIndex('digress-into-development'))
+
+	.use(archive('personal-blog'))
+	.use(firstPostAsIndex('personal-blog'))
 
 	.use(archive('digress-into-minimalism'))
 	.use(firstPostAsIndex('digress-into-minimalism'))
@@ -126,14 +138,20 @@ metalsmith(__dirname)
 	}))
 
 	.use(feed({
+		collection:  'personal-blog',
+		destination: 'personal-blog/atom.xml',
+		title:       'personal blog',
+	}))
+
+	.use(feed({
 		collection:  'digress-into-minimalism',
 		destination: 'digress-into-minimalism/atom.xml',
 		title:       'digress into minimalism',
 	}))
 
-	.use(formatcheck({ verbose: true }))
+	// .use(formatcheck({ verbose: true }))
 	.use(sitemap({ hostname: 'http://dudzik.co' }))
-	.use(linkcheck({failMissing: true}))
+	// .use(linkcheck({failMissing: true}))
 
 	.use(If(
 		!process.env.PRODUCTION,
