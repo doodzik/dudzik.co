@@ -14,7 +14,7 @@ In 2017 I will have to focus on my bachelor thesis until March. This leaves me w
 
 Writing articles for digress into minimalism forces me to verbalize my thoughts and makes them reproducible. 9 articles in 9 months is doable and it will allow me enough time for my other tasks.
 
-The articles are important, but the site that they are hosted on should not be neglected. It is its backbone and deserves attention as well. Having [tasks to complete in 2017](https://github.com/doodzik/dudzik.co/projects/1) will ensure that the site won't stagnate.
+The articles are important, but the site that they are hosted on should not be neglected. It is its backbone and deserves attention as well. Having [tasks to complete in 2017]() will ensure that the site won't stagnate.
 
 
 Additionally I want to develop one minimal viable product (MVP), which should deal with my recurring tasks. I will use this opportunity to learn something new.
@@ -35,8 +35,8 @@ I'm overall happy with my operational performance, but there is still room for i
 #### Physical Health
 
 
-My main focus this year will be my diet. I don’t like the feeling that I get after eating processed and fast food. I try to cut down my consumption by planning my meals and using fruits as substitutes for sweets. I will need some time to get the right processes into place. So I’m aiming for the beginning of the third quarter (Q3) to have it sorted out.
-My stomach doesn't handle alcohol very well. So I want to restirct my consumption of it entirely. 
+My focus this year will be my diet. I don’t like the feeling that I get after eating processed and fast food. I try to cut down my consumption by planning my meals and using fruits as substitutes for sweets. I will need some time to get the right processes into place. So I’m aiming for the beginning of the third quarter (Q3) to have it sorted out.
+My stomach doesn't handle alcohol well. So I want to restirct my consumption of it entirely. 
 
 
 * no processed food by the start of Q3

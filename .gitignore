@@ -41,3 +41,4 @@ jspm_packages
 .format_checked.json
 format_failed.json
 .links_checked.json
+links_failed.json
