@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "make",
     "test": "eslint . --fix --ignore-path .gitignore -c .eslintrc.js && npm run lintwriting",
     "precommit": "eslint . --fix --ignore-path .gitignore -c .eslintrc.production.js && npm run lintwriting",
     "lintwriting": "git diff --cached --name-only | grep md$ | xargs proselint"

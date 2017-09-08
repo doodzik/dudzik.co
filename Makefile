@@ -1,9 +1,9 @@
 
 serve: clean
-	node build.js
+	NODE_PATH=. node build.js
 
 build: clean
-	PRODUCTION=true node build.js
+	PRODUCTION=true NODE_PATH=. node build.js
 
 clean:
 	rm -rf .tmp
