@@ -7,7 +7,7 @@ keywords: dask
 # The Dask Terms of Use 
 Effective date: 12 Sept 2017
 
-These Terms of Use govern, together with the [Privacy Policy](./privacy-policy), your use of the dask mobile application (the ”Application”) and related services provided by Frederik Dudzik (”Us”, ”We”).
+These Terms of Use govern, together with the [Privacy Policy](/dask/privacy-policy), your use of the dask mobile application (the ”Application”) and related services provided by Frederik Dudzik (”Us”, ”We”).
 By downloading the Application you agree to be bound by these Terms of Use and by completing the online registration process, you confirm and affirm that you have read, understood and agree to these Terms of Use. If you do not agree to these Terms of Use, do not use the Application.
 
 ## Communications with dask
