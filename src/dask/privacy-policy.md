@@ -1,10 +1,10 @@
 ---
 subtitle: dask - Privacy Policy
-description: Terms of Use for the dask app
+description: Privacy Policy for the dask app
 head: "<meta name='robots' content='noindex' />"
 keywords: "dask Privacy Policy"
 ---
-# Dask's Privacy Policy
+# The Dask Privacy Policy
 
 This Privacy Policy relates to our use of any personally identifiable data (”Personal Data”) collected from you when using the dask app. We will only collect Personal Data for specified, explicit and legitimate purposes. Once Personal Data is collected, we will not process it further in any way that is incompatible with those purposes.
 
