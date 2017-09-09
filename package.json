@@ -6,8 +6,8 @@
   "//": "dependency check: lib, swig are used for templating in the build script, husky for the precommit hook in this file, lib is an folder in the root dir and depcheck for checking dependencies",
   "scripts": {
     "start": "make",
-    "test": "eslint . --fix --ignore-path .gitignore -c .eslintrc.js",
-    "precommit": "eslint . --fix --ignore-path .gitignore -c .eslintrc.production.js",
+    "test": "eslint . --fix --ignore-path .gitignore -c .eslintrc.js && npm run lintwriting",
+    "precommit": "eslint . --fix --ignore-path .gitignore -c .eslintrc.production.js && npm run lintwriting && depcheck . --ignores lib,swig,pug,husky,depcheck",
     "lintwriting": "git diff --cached --name-only | grep md$ | xargs proselint"
   },
   "repository": {
