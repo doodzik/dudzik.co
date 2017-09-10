@@ -50,9 +50,6 @@ You may at any time terminate your membership, in which case your membership wil
 
 We reserve the right to, from time to time, in our sole discretion amend these Terms of Use. It is your responsibility to review these Terms of Use from time to time to understand the extent of changes. Your continued use of the Application constitutes your agreement to the amended and updated Terms of Use.
 
-We reserve the right at any time and from time to time to modify or discontinue, temporarily or permanently, the Application (or any part of it) with or without notice.
-
-5. Complete Agreement
 These Terms of Application, together with the dask Privacy Statement, represent the complete and exclusive statement of the agreement between you and us. This Agreement supersedes any proposal or prior agreement oral or written, and any other communications between you and dask relating to the subject matter of these terms.
 
 ## Contacting Us
