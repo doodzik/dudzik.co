@@ -132,7 +132,7 @@ metalsmith(__dirname)
 	}))
 
 	.use(formatcheck({ verbose: true }))
-	.use(sitemap({ hostname: 'http://dudzik.co' }))
+	.use(sitemap({ hostname: 'https://dudzik.co' }))
 	.use(linkcheck({failMissing: true}))
 
 	.use(If(
