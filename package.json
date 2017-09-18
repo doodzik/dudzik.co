@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "//": "dependency check: lib, swig are used for templating in the build script, husky for the precommit hook in this file, lib is an folder in the root dir and depcheck for checking dependencies",
   "scripts": {
+    "start": "make",
     "test": "eslint . --fix --ignore-path .gitignore -c .eslintrc.js && npm run lintwriting",
-    "precommit": "eslint . --fix --ignore-path .gitignore -c .eslintrc.production.js && npm run lintwriting",
+    "precommit": "eslint . --fix --ignore-path .gitignore -c .eslintrc.production.js && npm run lintwriting && depcheck . --ignores lib,swig,pug,husky,depcheck",
     "lintwriting": "git diff --cached --name-only | grep md$ | xargs proselint"
   },
   "repository": {
@@ -18,9 +20,10 @@
     "url": "https://github.com/doodzik/dudzik.co/issues"
   },
   "homepage": "https://github.com/doodzik/dudzik.co#readme",
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer": "^6.3.6",
     "cssnano": "^3.3.2",
+    "depcheck": "^0.6.7",
     "eslint": "^3.14.1",
     "husky": "^0.13.1",
     "lodash": "^4.13.1",
@@ -35,19 +38,16 @@
     "metalsmith-if": "^0.1.1",
     "metalsmith-in-place": "^1.3.2",
     "metalsmith-layouts": "^1.4.2",
-    "metalsmith-linkcheck": "^0.2.0",
+    "metalsmith-linkcheck": "^0.3.0",
     "metalsmith-markdownit": "^0.3.0",
     "metalsmith-permalinks": "^0.5.0",
     "metalsmith-postcss": "^3.1.1",
     "metalsmith-sitemap": "^1.0.0",
     "metalsmith-uglify": "^1.5.1",
+    "markdown-it-footnote": "^3.0.1",
     "minimatch": "^3.0.2",
     "postcss-css-variables": "^0.5.1",
     "pug": "^2.0.0-beta3",
     "swig": "^1.4.2"
-  },
-  "dependencies": {
-    "markdown-it-footnote": "^3.0.1",
-    "metalsmith-linkcheck": "^0.3.0"
   }
 }

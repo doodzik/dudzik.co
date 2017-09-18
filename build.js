@@ -21,14 +21,14 @@ var uglify           = require('metalsmith-uglify')
 var metadata   = require('./metadata')
 
 // custom metalsmith plugins
-var redirect         = require('./lib/plugin/redirect')
-var firstPostAsIndex = require('./lib/plugin/first-post-as-index')
-var archive          = require('./lib/plugin/archive')
+var redirect         = require('lib/plugin/redirect')
+var firstPostAsIndex = require('lib/plugin/first-post-as-index')
+var archive          = require('lib/plugin/archive')
 
 // fn
-var sortDateField    = require('./lib/sort-date')
+var sortDateField    = require('lib/sort-date')
 
-var postcssPlugins   = require('./lib/postcss.js')
+var postcssPlugins   = require('lib/postcss.js')
 
 // Build
 metalsmith(__dirname)
@@ -150,7 +150,7 @@ metalsmith(__dirname)
 	}))
 
 	// .use(formatcheck({ verbose: true }))
-	.use(sitemap({ hostname: 'http://dudzik.co' }))
+	.use(sitemap({ hostname: 'https://dudzik.co' }))
 	// .use(linkcheck({failMissing: true}))
 
 	.use(If(

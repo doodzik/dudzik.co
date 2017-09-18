@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+URLS=$(cat sitemap.xml | grep "<loc>" | awk -F"<loc>" '{print $2} ' | awk -F"</loc>" '{print $1}' | awk -F"http://dudzik.co" '{print $2}')
+
+for URL in $URLS 
+do
+  if [ ! -e ".$URL" ]; then
+    echo "file isn't uploaded: .$URL"
+    exit 1
+  fi 
+done
+
