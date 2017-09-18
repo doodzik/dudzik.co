@@ -11,6 +11,8 @@ Feel free to [contact me](/contact).
 
 <!-- Blog -->
 * [Software Development Blog](/digress-into-development)
+* [Personal Blog](/personal-blog)
 * [Apps](https://itunes.apple.com/developer/frederik-dudzik/id1239181420)
 * [Open Source](https://github.com/doodzik)
 <!-- * [321157](https://www.youtube.com/channel/UCxn7NPh14hNmQC8YqMr2Urg) -->
+
