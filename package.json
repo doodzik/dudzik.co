@@ -7,7 +7,7 @@
   "scripts": {
     "start": "make",
     "test": "eslint . --fix --ignore-path .gitignore -c .eslintrc.js && npm run lintwriting",
-    "precommit": "eslint . --fix --ignore-path .gitignore -c .eslintrc.production.js && npm run lintwriting && depcheck . --ignores lib,swig,pug,husky,depcheck",
+    "precommit": "eslint . --fix --ignore-path .gitignore -c .eslintrc.production.js && npm run lintwriting && depcheck . --ignores lib,swig,pug,husky,depcheck && make build",
     "lintwriting": "git diff --cached --name-only --diff-filter=d | grep md$ | xargs proselint"
   },
   "repository": {
