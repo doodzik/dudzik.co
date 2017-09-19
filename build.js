@@ -98,8 +98,16 @@ metalsmith(__dirname)
 	.use(archive('personal-blog'))
 	.use(firstPostAsIndex('personal-blog'))
 
-	.use(archive('digress-into-minimalism'))
-	.use(firstPostAsIndex('digress-into-minimalism'))
+	.use(function(files) {
+		var filenames = Object.keys(files)
+		filenames.forEach(function (filename) {
+			var file = files[filename]
+			if(typeof file.noindex !== 'undefined') {
+				file.head = file.head || ""
+        file.head = file.head + "<meta name='robots' content='noindex' />"
+			}
+		})
+	})
 
 	.use(inPlace('swig'))
 
@@ -110,8 +118,7 @@ metalsmith(__dirname)
 		pattern:  '**/**.html'
 	}))
 
-// This is done so the title in the rss is set
-// This issue arises because the title var is used in the layout
+// This is done so the title in the rss is set // This issue arises because the title var is used in the layout
 // And thus the actual var for the title is called headline
 	.use(function(files) {
 		var filenames = Object.keys(files)
@@ -150,7 +157,7 @@ metalsmith(__dirname)
 
 	.use(formatcheck({ verbose: true }))
 	.use(sitemap({ hostname: 'https://dudzik.co' }))
-	.use(linkcheck({failMissing: true}))
+	.use(linkcheck({ failMissing: true, verbose: true }))
 
 	.use(If(
 		!process.env.PRODUCTION,

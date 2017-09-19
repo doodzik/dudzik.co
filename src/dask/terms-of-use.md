@@ -1,7 +1,7 @@
 ---
 subtitle: dask - Terms of Use
 description: Terms of Use for the dask app
-head: "<meta name='robots' content='noindex' />"
+noindex: true
 keywords: dask 
 ---
 # The Dask Terms of Use 
@@ -54,5 +54,5 @@ These Terms of Application, together with the dask Privacy Statement, represent 
 
 ## Contacting Us
 
-Questions regarding dask's terms of use or information practices should be directed to our [contact form](https://dudzik.co/contact)
+Questions regarding dask's terms of use or information practices should be directed to our [contact form](/contact)
 

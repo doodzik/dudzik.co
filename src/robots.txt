@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /dask/privacy-policy/
 Disallow: /dask/terms-of-use/
+Sitemap: https://dudzik.co/sitemap.xml

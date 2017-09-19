@@ -1,7 +1,7 @@
 ---
 subtitle: dask - Privacy Policy
 description: Privacy Policy for the dask app
-head: "<meta name='robots' content='noindex' />"
+noindex: true
 keywords: "dask Privacy Policy"
 ---
 # The Dask Privacy Policy
@@ -37,5 +37,5 @@ We may retain certain User Personal Information indefinitely, unless you delete 
 
 ## Contacting Us
 
-Questions regarding dask's Privacy Statement or information practices should be directed to our [contact form](https://dudzik.co/contact)
+Questions regarding dask's Privacy Statement or information practices should be directed to our [contact form](/contact)
 
