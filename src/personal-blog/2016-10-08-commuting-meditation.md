@@ -10,7 +10,7 @@ Mindfulness is the state of being conscious of yourself and your surroundings. T
 Some practices can help you to enter the state of mindfulness more easily, like meditation, yoga and knitting.
 My personal preference is to practice a variation of walking meditation, which I call commuting meditation.
 
-While you are commuting focus on your surroundings. Specifically on the little details. Notice the tickling feeling you get on your sole while riding in the subway. The whistling of the wind while riding your bike. The rhythmic movement of a stranger’s hand. If your mind starts to wander, focus on the next detail. Don't judge, think or react to your what you observe, as this can hinder your ability to be in the present. 
+While you are commuting focus on your surroundings. Specifically on the little details. Notice the tickling feeling you get on your sole while riding in the subway. The whistling of the wind while riding your bike. The rhythmic movement of a stranger’s hand. If your mind starts to wander, focus on the next detail. Don't interpret, think or react to your what you observe, as this can hinder your ability to be in the present. 
 
 Obviously, do not meditate while driving.
 
