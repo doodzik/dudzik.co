@@ -103,8 +103,8 @@ metalsmith(__dirname)
 		filenames.forEach(function (filename) {
 			var file = files[filename]
 			if(typeof file.noindex !== 'undefined') {
-				file.head = file.head || ""
-        file.head = file.head + "<meta name='robots' content='noindex' />"
+				file.head = file.head || ''
+				file.head = file.head + '<meta name=\'robots\' content=\'noindex\' />'
 			}
 		})
 	})
