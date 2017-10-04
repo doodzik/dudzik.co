@@ -1,4 +1,7 @@
-click==6.6
-future==0.15.2
-proselint==0.6.1
-six==1.10.0
+click==6.7
+future==0.16.0
+proselint==0.8.0
+pytz==2017.2
+simplejson==3.10.0
+six==1.11.0
+yahoo-finance==1.4.0

@@ -6,8 +6,6 @@ var layout           = require('metalsmith-layouts')
 var collections      = require('metalsmith-collections')
 var permalinks       = require('metalsmith-permalinks')
 var sitemap          = require('metalsmith-sitemap')
-var linkcheck        = require('metalsmith-linkcheck')
-var formatcheck      = require('metalsmith-formatcheck')
 var compress         = require('metalsmith-gzip')
 var If               = require('metalsmith-if')
 var htmlMinifier     = require('metalsmith-html-minifier')
@@ -57,7 +55,9 @@ metalsmith(__dirname)
 	typographer: true,
 	linkify: true,
 	html: true
-}).use(require('markdown-it-footnote')))
+})
+  .use(require('markdown-it-footnote'))
+  .use(require('markdown-it-classy')))
 
 .use(collections({
 	'digress-into-development': {

@@ -170,6 +170,15 @@ pre {
   list-style-position: inside;
 }
 
+.post img {
+  height: 100%;
+  width: 100%;
+}
+
+.post .figure {
+  text-align: center;
+}
+
 /************************/
 /******about:blank*******/
 /************************/
