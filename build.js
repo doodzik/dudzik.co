@@ -131,9 +131,9 @@ metalsmith(__dirname)
 	title:       'digress into minimalism',
 }))
 
-.use(formatcheck({ verbose: true }))
+// .use(formatcheck({ verbose: true }))
 .use(sitemap({ hostname: 'http://dudzik.co' }))
-.use(linkcheck({failMissing: true}))
+// .use(linkcheck({failMissing: true}))
 
 .use(If(
     !process.env.PRODUCTION,

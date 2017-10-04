@@ -157,6 +157,10 @@ pre {
   overflow-y: auto;
 }
 
+.post {
+  text-align: justify;
+}
+
 .post a:visited {
   color: purple;
 }
