@@ -1,7 +1,7 @@
 ---
 layout: post.pug
 headline: Do Structured Bug Reports Reduce Bug Processing Costs?
-date: 2017-10-05
+date: 2017-10-08
 description: This article is attempts to empirically show that structured bug reports reduce the bug management effort of developers. It is shown that having a template for bug reports results in fewer comments per bug report and fewer bug reports generated. Additionally, developers spend more time on a given report and more reports were closed.
 keywords: dudzik, frederik dudzik, github issue template, do github issue template work, structured bug reports, structured github issues
 ---
@@ -39,6 +39,7 @@ For this empirical study, the 1,000 most popular projects hosted on GitHub (as o
 * The project must have activated issues, 958 projects
 * The project must have activated issue templates, 341 projects
 * Issue templates must have been activated for at least 5 months and the project must have existed for 10 months, 212 projects
+* The project must have Issues that are tagged as bugs opened both before and after the introduction of Issue Templates, 208 projects
 
 The bug reports in each project are monitored over the time span of 5 months after their creation. Bug reports created before and after the introduction of Issues Templates are compared, only considering bug reports that have been created up to 5 months before or after issue templates have been enabled.
 
@@ -48,33 +49,46 @@ The following research questions are examined:
 2. How much does the average number of comments per issue change? This question is intended to answer whether the communication effort for the developer changes.
 3. How fast are bug reports closed? This question is intended to answer whether structured bug reports contribute to faster processing.
 
-Only issues containing a label with the content “bug”, which is used by default for the identification of bug reports, are being evaluated. For each project the value for the given research questions is retrieved before and after the introduction of Issue Template and the change is calculated. The extreme 5% of values are then removed. The average value for all projects is calculated.
+Only issues containing a label with the content “bug”, which is used by default for the identification of bug reports, are being evaluated. For each project the value for the given research questions is retrieved before and after the introduction of Issue Template and the change is calculated. The extreme 5% of values are then removed (the extreme values were not removed from the histograms). The average value for all projects is calculated. 
 
 ## Results
+
 ### How much does the number of newly opened bug reports change?
 
 The number of opened bug reports across all projects has decreased by an average of 4% in the monitored period, which suggests a reduction of the developer's workload. Interestingly, the median value shows a reduction of 11%. This can be attributed to the fact that the majority of the projects show moderate decline, but a small number of projects show significant growth.
 
 78 projects have seen an increase in bug reports, 130 projects recorded a reduction, and the rest have remained constant. Projects with an increased volume of bugs reports show an average increase of 342% and the other projects a reduction of 26%. The strong growth could be due to the fact that Issue Templates make issues easier to classify as bug reports, or that these projects have experienced a strong growth in popularity[^5].
 
+![Change in in the number of opened Bug Reports after the Introduction of Issue Templates.](./opend-bugs.png)
+*Change in in the number of opened Bug Reports after the Introduction of Issue Templates.*
+{figure}
+
 ### How much does the average number of comments per issue change?
 
 The average number of comments per bug report has decreased by 6%. If we only look at the closed bug reports, the number of comments per bug report decreases by 2%. This decrease could be due to developers having to ask fewer questions to clarify a bug report.
 
+![Change in number of comments per Bug Report after the introduction of Issue Templates](./comment-not-closed.png)
+*Change in number of comments per Bug Report after the introduction of Issue Templates.*
+{figure}
+
 ### How fast are bug reports closed?
 
-The share of bug reports closed within 5 months increases by 26%, but it takes 40% longer to close them (the median is 3% - some reports take much longer to close). One explanation for the bug reports staying open longer might be that the bug reports have become more reproducible, which eliminates a common reason for early closure. It can be assumed that the precisely formulated, structured bug reports have led to a more thorough analysis of bugs. It is easier to identify solutions if the problems are clearly defined.
+The share of bug reports closed within 5 months increases by 25%, but it takes 41% longer to close them (the median is 3% - some reports take much longer to close). One explanation for the bug reports staying open longer might be that the bug reports have become more reproducible, which eliminates a common reason for early closure. It can be assumed that the precisely formulated, structured bug reports have led to a more thorough analysis of bugs. It is easier to identify solutions if the problems are clearly defined.
 
-```
-# TK Graphs
-```
+![Change in time required to close a Bug Report after the Introduction of Issue Templates (in percent)](./closed-bugs-time.png)
+*Change in time required to close a Bug Report after the Introduction of Issue Templates (in percent).*
+{figure}
+
+![Change in percentage of closed Bug Reports after the Introduction of Issue Templates.](./closed-bugs.png)
+*Change in percentage of closed Bug Reports after the Introduction of Issue Templates.*
+{figure}
 
 ### Summary
 
 * 6% fewer comments per bug report are written
 * 4% fewer bug reports are opened
-* The processing time for bug reports increased by 40%
-* 26% more bug reports were closed
+* The processing time for bug reports increased by 41%
+* 25% more bug reports were closed
 
 ## Conclusion
 
@@ -87,6 +101,11 @@ In this study, the bug reporters were mostly developers and thus technically exp
 The quality of the issue templates can have an impact on the test results, but this outside the scope of this study. It was assumed that the project members include the necessary information in the issue template for each project.
 
 The number of Emoji responses to bug reports and the number of users who follow the activity on bug reports could provide an insight into whether users are looking for existing bug reports rather than recreating them.
+
+The evaluation scripts and the dataset are publicly available. If you decide to use them please reference this article.
+
+Dataset (475.9 mb): http://data.dudzik.co/github-issue-template-data.zip <br/>
+Scripts: https://github.com/doodzik/github-issue-template-analysis-scripts
 
 [^1]: Just, Sascha, Rahul Premraj, and Thomas Zimmermann. “Towards the next generation of bug tracking systems.” Visual languages and Human-Centric computing, 2008. VL/HCC 2008. IEEE symposium on. IEEE, 2008.
 [^2]: Bettenburg, Nicolas, et al. “What makes a good bug report?.” Proceedings of the 16th ACM SIGSOFT International Symposium on Foundations of software engineering. ACM, 2008.
