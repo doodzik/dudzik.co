@@ -1,10 +1,10 @@
 ---
 subtitle: dask - Privacy Policy
-description: Terms of Use for the dask app
-head: "<meta name='robots' content='noindex' />"
+description: Privacy Policy for the dask app
+noindex: true
 keywords: "dask Privacy Policy"
 ---
-# Dask's Privacy Policy
+# The Dask Privacy Policy
 
 This Privacy Policy relates to our use of any personally identifiable data (”Personal Data”) collected from you when using the dask app. We will only collect Personal Data for specified, explicit and legitimate purposes. Once Personal Data is collected, we will not process it further in any way that is incompatible with those purposes.
 
@@ -37,5 +37,5 @@ We may retain certain User Personal Information indefinitely, unless you delete 
 
 ## Contacting Us
 
-Questions regarding dask's Privacy Statement or information practices should be directed to our [contact form](https://dudzik.co/contact)
+Questions regarding dask's Privacy Statement or information practices should be directed to our [contact form](/contact)
 
