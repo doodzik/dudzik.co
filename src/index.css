@@ -157,6 +157,10 @@ pre {
   overflow-y: auto;
 }
 
+.post {
+  text-align: justify;
+}
+
 .post a:visited {
   color: purple;
 }
@@ -164,6 +168,15 @@ pre {
 .post ul {
   list-style-type: disc;
   list-style-position: inside;
+}
+
+.post img {
+  height: 100%;
+  width: 100%;
+}
+
+.post .figure {
+  text-align: center;
 }
 
 /************************/

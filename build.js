@@ -17,7 +17,7 @@ var postcss      = require('metalsmith-postcss')
 var uglify       = require('metalsmith-uglify')
 
 // Import metadata
-var metadata   = require('./metadata')
+var metadata = require('./metadata')
 
 // custom metalsmith plugins
 var redirect         = require('lib/plugin/redirect')
@@ -26,7 +26,6 @@ var archive          = require('lib/plugin/archive')
 
 // fn
 var sortDateField    = require('lib/sort-date')
-
 var postcssPlugins   = require('lib/postcss.js')
 
 // Build
@@ -57,7 +56,8 @@ metalsmith(__dirname)
 		typographer: true,
 		linkify: true,
 		html: true
-	}).use(require('markdown-it-footnote')))
+	}).use(require('markdown-it-footnote'))
+    .use(require('markdown-it-classy')))
 
 	.use(collections({
 		'digress-into-development': {
@@ -70,14 +70,6 @@ metalsmith(__dirname)
 		},
 		'personal-blog': {
 			pattern: 'personal-blog/**/**.html',
-			sortBy:  sortDateField,
-			reverse: true,
-			metadata: {
-				mailingList: 'http://eepurl.com/cnGa2X'
-			}
-		},
-		'digress-into-minimalism': {
-			pattern: 'digress-into-minimalism/**/**.html',
 			sortBy:  sortDateField,
 			reverse: true,
 			metadata: {
@@ -131,6 +123,7 @@ metalsmith(__dirname)
 	})
 
 // TODO: remove this rss feed
+
 	.use(feed({
 		collection:  'digress-into-development',
 		destination: 'atom.xml',
@@ -147,12 +140,6 @@ metalsmith(__dirname)
 		collection:  'personal-blog',
 		destination: 'personal-blog/atom.xml',
 		title:       'personal blog',
-	}))
-
-	.use(feed({
-		collection:  'digress-into-minimalism',
-		destination: 'digress-into-minimalism/atom.xml',
-		title:       'digress into minimalism',
 	}))
 
 	.use(formatcheck({ verbose: true }))
@@ -187,4 +174,3 @@ metalsmith(__dirname)
 	.build(function(err){
 		if (err) throw err
 	})
-
