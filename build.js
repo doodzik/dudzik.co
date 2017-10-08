@@ -56,7 +56,7 @@ metalsmith(__dirname)
 		typographer: true,
 		linkify: true,
 		html: true
-	}).use(require('markdown-it-footnote')))
+	}).use(require('markdown-it-footnote'))
     .use(require('markdown-it-classy')))
 
 	.use(collections({
