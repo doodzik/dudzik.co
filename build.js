@@ -15,6 +15,8 @@ var markdown     = require('metalsmith-markdownit')
 var browserSync  = require('metalsmith-browser-sync')
 var postcss      = require('metalsmith-postcss')
 var uglify       = require('metalsmith-uglify')
+var copy         = require('metalsmith-copy')
+var path         = require('path')
 
 // Import metadata
 var metadata = require('./metadata')
@@ -83,6 +85,30 @@ metalsmith(__dirname)
 		pattern: ':collection/:headline'
 	}))
 
+  .use(copy({
+    pattern: 'digress-into-development/**/**.png',
+    move: true,
+    transform: file => {
+      const splitted = file.split(path.sep)
+      const tokens = splitted[1].split('-').slice(3)
+      const result = tokens.join('-')
+      splitted[1] = result
+      return splitted.join(path.sep)
+    }
+  }))
+
+  .use(copy({
+    pattern: 'personal-blog/**/**.png',
+    move: true,
+    transform: file => {
+      const splitted = file.split(path.sep)
+      const tokens = splitted[1].split('-').slice(3)
+      const result = tokens.join('-')
+      splitted[1] = result
+      return splitted.join(path.sep)
+    }
+  }))
+
 	.use(redirect('php'))
 	.use(archive('digress-into-development'))
 	.use(firstPostAsIndex('digress-into-development'))
@@ -123,7 +149,6 @@ metalsmith(__dirname)
 	})
 
 // TODO: remove this rss feed
-
 	.use(feed({
 		collection:  'digress-into-development',
 		destination: 'atom.xml',

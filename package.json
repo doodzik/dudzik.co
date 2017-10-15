@@ -33,6 +33,7 @@
     "metalsmith": "^2.1.0",
     "metalsmith-browser-sync": "^1.1.0",
     "metalsmith-collections": "^0.7.0",
+    "metalsmith-copy": "^0.3.0",
     "metalsmith-feed": "^0.2.0",
     "metalsmith-fingerprint-ignore": "^1.1.2",
     "metalsmith-formatcheck": "^0.2.4",
