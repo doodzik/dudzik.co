@@ -86,28 +86,28 @@ metalsmith(__dirname)
 	}))
 
   .use(copy({
-    pattern: 'digress-into-development/**/**.png',
-    move: true,
-    transform: file => {
-      const splitted = file.split(path.sep)
-      const tokens = splitted[1].split('-').slice(3)
-      const result = tokens.join('-')
-      splitted[1] = result
-      return splitted.join(path.sep)
-    }
-  }))
+	pattern: 'digress-into-development/**/**.png',
+	move: true,
+	transform: file => {
+		const splitted = file.split(path.sep)
+		const tokens = splitted[1].split('-').slice(3)
+		const result = tokens.join('-')
+		splitted[1] = result
+		return splitted.join(path.sep)
+	}
+}))
 
   .use(copy({
-    pattern: 'personal-blog/**/**.png',
-    move: true,
-    transform: file => {
-      const splitted = file.split(path.sep)
-      const tokens = splitted[1].split('-').slice(3)
-      const result = tokens.join('-')
-      splitted[1] = result
-      return splitted.join(path.sep)
-    }
-  }))
+	pattern: 'personal-blog/**/**.png',
+	move: true,
+	transform: file => {
+		const splitted = file.split(path.sep)
+		const tokens = splitted[1].split('-').slice(3)
+		const result = tokens.join('-')
+		splitted[1] = result
+		return splitted.join(path.sep)
+	}
+}))
 
 	.use(redirect('php'))
 	.use(archive('digress-into-development'))

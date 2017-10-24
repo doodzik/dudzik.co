@@ -6,8 +6,10 @@
   "//": "dependency check: lib, swig are used for templating in the build script, husky for the precommit hook in this file, lib is an folder in the root dir and depcheck for checking dependencies",
   "scripts": {
     "start": "make",
-    "test": "eslint . --fix --ignore-path .gitignore -c .eslintrc.js && npm run lintwriting",
-    "test-ci": "eslint . --fix --ignore-path .gitignore -c .eslintrc.production.js && npm run lintwriting && depcheck . --ignores lib,swig,pug,husky,depcheck",
+    "test": "npm run lint && npm run lintwriting",
+    "test-ci": "npm run lint-prod && npm run lintwriting && depcheck . --ignores lib,swig,pug,husky,depcheck,eslint-config",
+    "lint": "eslint . --fix --ignore-path .gitignore -c ./node_modules/eslint-config/.eslintrc.js ",
+    "lint-prod": "eslint . --fix --ignore-path .gitignore -c ./node_modules/eslint-config/.eslintrc.production.js ",
     "precommit": "npm run test-ci && make build",
     "lintwriting": "git diff --cached --name-only --diff-filter=d | grep md$ | xargs proselint"
   },
@@ -26,6 +28,7 @@
     "cssnano": "^3.3.2",
     "depcheck": "^0.6.7",
     "eslint": "^3.14.1",
+    "eslint-config": "github:doodzik/eslint-config",
     "husky": "^0.13.1",
     "lodash": "^4.13.1",
     "markdown-it-classy": "^0.2.0",
