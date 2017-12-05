@@ -60,4 +60,3 @@ return Promise.all([
 	})
   .catch(console.log)
 
-
