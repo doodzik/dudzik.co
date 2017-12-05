@@ -54,6 +54,7 @@
     "minimatch": "^3.0.2",
     "postcss-css-variables": "^0.5.1",
     "pug": "^2.0.0-beta3",
-    "swig": "^1.4.2"
+    "swig": "^1.4.2",
+    "visual-acceptance-test": "github:doodzik/visual-acceptance-test"
   }
 }
