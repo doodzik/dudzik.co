@@ -1,5 +1,7 @@
 # dudzik.co
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/doodzik/dudzik.co.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/doodzik/dudzik.co.svg?branch=master)](https://travis-ci.org/doodzik/dudzik.co)
 
 ## Installation
