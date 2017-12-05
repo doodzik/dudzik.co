@@ -7,7 +7,7 @@
   "scripts": {
     "start": "make",
     "test": "npm run lint && npm run lintwriting",
-    "test-ci": "npm run lint-prod && npm run lintwriting && depcheck . --ignores lib,swig,pug,husky,depcheck,eslint-config",
+    "test-ci": "npm run lint-prod && npm run lintwriting && depcheck . --ignores lib,swig,pug,husky,depcheck,eslint-config,visual-acceptance-test",
     "lint": "eslint . --fix --ignore-path .gitignore -c ./node_modules/eslint-config/.eslintrc.js ",
     "lint-prod": "eslint . --fix --ignore-path .gitignore -c ./node_modules/eslint-config/.eslintrc.production.js ",
     "precommit": "npm run test-ci && make build",
@@ -54,6 +54,7 @@
     "minimatch": "^3.0.2",
     "postcss-css-variables": "^0.5.1",
     "pug": "^2.0.0-beta3",
-    "swig": "^1.4.2"
+    "swig": "^1.4.2",
+    "visual-acceptance-test": "github:doodzik/visual-acceptance-test#dev"
   }
 }
