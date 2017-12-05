@@ -46,6 +46,7 @@ return Promise.all([
 		return diff({
 			actual:      pathTo(time.pastCommit),
 			expected:    pathTo('HEAD'),
+			diff:        pathTo('DIFF'),
 			persistDiff: false
 		})
 	})
