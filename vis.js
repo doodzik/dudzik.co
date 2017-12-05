@@ -51,7 +51,8 @@ return Promise.all([
 		})
 	})
 	.then(result => {
-	  return (process.env.CI) ? confirmation.cli({result}) : confirmation.browser({result})
+    // TODO fix browser displaying
+	  // return (process.env.CI) ? confirmation.cli({result}) : confirmation.browser({result})
 		return confirmation.cli({result})
 	})
 	.then(exitCode => {
