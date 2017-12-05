@@ -30,6 +30,7 @@ function build() {
 	})
 }
 
+
 return Promise.all([
 	server.listen(),
 	build(),
