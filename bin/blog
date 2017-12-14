@@ -2,7 +2,7 @@
 
 if [[ "$1" ]]; then
   TITLE="$@"
-  ./bin/new digress-into-minimalism $TITLE
+  ./bin/new personal-blog $TITLE
 else
   "no title entered"
 fi

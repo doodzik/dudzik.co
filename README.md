@@ -20,9 +20,9 @@ build the website
 $ make build
 ```
 
-add a new minimalism post
+add a new blog post
 ```
-$ make mini TITLE="mini"
+$ make blog TITLE="mini"
 ```
 
 add a new development post

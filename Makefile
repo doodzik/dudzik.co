@@ -12,8 +12,8 @@ install:
 	pip install -r requirements.txt
 	npm install
 
-mini:
-	./bin/mini ${TITLE}
+blog:
+	./bin/blog ${TITLE}
 
 dev:
 	./bin/dev ${TITLE}
