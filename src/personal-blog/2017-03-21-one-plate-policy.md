@@ -19,7 +19,7 @@ This eliminated the stack of dirty dishes in the sink, which in turn made it les
 Furthermore it became easier to clean the cutlery as there was more room in the sink.
 
 To accommodate guests we had excess dishes stored in a place that was more troublesome to access than to clean a single cutlery.
-This made sure that we didn't take advantage the clean dishes.
+This made sure that we didn't take advantage of the clean dishes.
 
 Obviously this whole issue could be avoided by cleaning after oneself.
 
