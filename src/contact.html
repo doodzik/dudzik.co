@@ -3,6 +3,16 @@ subtitle:    Contact
 description: The form to contact Frederik Dudzik
 keywords:    dudzik, frederik dudzik, frederik dudzik contact, contact frederik dudzik, contact dudzik, dudzik contact
 ---
+
+<ul>
+  <li>You can write me in English.</li>
+  <li>Du kannst mir auf Deutsch schreiben.</li>
+  <li>Możesz do mnie napisać po polsku.</li>
+  <li>Puedes escribirme en español.</li>
+</ul>
+
+<br/>
+
 <form name="contact" method="post" action="/contact/send.php" onsubmit="return validateForm()">
 
   <label for="username" style="display:none;">If you are human, leave this field blank (required):</label>
@@ -14,7 +24,7 @@ keywords:    dudzik, frederik dudzik, frederik dudzik contact, contact frederik 
 
   <label for="content">your message:</label>
   <label for="content" id="contentError" class="error">Please enter a message</label>
-  <textarea name="content" class="contact-message" id="content">Hello Frederik,&#10;&#10;</textarea>
+  <textarea name="content" class="contact-message" id="content">Hi Frederik,&#10;&#10;</textarea>
 
   <input type="submit" id="submit" name="submit" value="send">
 </form>
