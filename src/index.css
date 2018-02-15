@@ -5,9 +5,10 @@
 :root {
     --color-background:            #EEEEEE;
     --color-text:                  #444;
-    --color-text-unobtrusive:      rgba(68, 68, 68, 0.8);
-    --color-text-unobtrusive-more: rgba(68, 68, 68, 0.4);
+    --color-text-unobtrusive:      rgb(102, 102, 102);
+    --color-text-unobtrusive-more: rgb(170, 170, 170);
     --color-link-hover:            #4f6eb3;
+    --color-link-active:           purple;
 }
 
 /************************/
@@ -133,7 +134,7 @@ input:focus, select:focus, textarea:focus, button:focus {
 }
 
 .posts a:visited {
-  color: purple;
+  color: var(--color-link-active);
 }
 
 .posts h3 {
@@ -163,7 +164,7 @@ pre {
 }
 
 .post a:visited {
-  color: purple;
+  color: var(--color-link-active);
 }
 
 .post ul {
@@ -195,5 +196,58 @@ pre {
   text-decoration: none;  
   color: var(--color-text);
   cursor: default;
+}
+
+/************************/
+/*****Platform Values****/
+/************************/
+
+.platform-badge-label {
+  display:block
+}
+
+.platform-title {
+  font-size: 1.5em;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid rgb(196, 196, 196);
+  border-radius: 2px;
+  width: 100%;
+  margin: 10px 0 30px 0;
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+.platform-title:focus {
+  outline: none
+}
+
+.platform-values-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.platform-values-container > a {
+  width: 150px;
+  margin: 5px auto;
+  text-align: center;
+  line-height: 75px;
+  color: var(--color-text);
+  cursor: pointer;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+.platform-values-container > a:hover {
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.platform-values-container > a:active {
+  box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+.platform-values-container > .active {
+  background-color: var(--color-text-unobtrusive-more);
 }
 

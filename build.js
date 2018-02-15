@@ -53,6 +53,7 @@ metalsmith(__dirname)
 		uglify({filter: ['index.js']})
 	))
 	.use(fingerprint({pattern: 'contact/contact.js'}))
+	.use(fingerprint({pattern: 'digress-into-development/2018-03-01-platform-values/index.js'}))
 
 	.use(markdown({
 		typographer: true,

@@ -1,0 +1,100 @@
+---
+layout: post.pug
+headline: "Platform Values"
+date: 2018-03-24
+description: 'This page gives you a tool to add your platform values as a badge to your project’s README. It was inspired by the talk “Platform as a Reflection of Values: Joyent, node.js, and beyond” by Bryan Cantrill.'
+keywords: dudzik, frederik dudzik, Platform as a Reflection of Values: Joyent node.js and beyond, Bryan Cantrill, platform values, project values
+---
+
+<noscript>
+  <p>This page doesn't work without javascript. I know that I made the case for progressive enhancement in the past. I’m sorry, but in this instance, the added benefit is less than the development cost on my end. This is primarily due to the way my website is built.</p>
+</noscript>
+
+<input placeholder="Name of Platform" name="platformName" class="platform-title" />
+<div class="platform-values-container link_exception">
+  <a href="javascript:void(0)" role="button">Approachability</a>
+  <a href="javascript:void(0)" role="button">Availability</a>
+  <a href="javascript:void(0)" role="button">Compatibility</a>
+  <a href="javascript:void(0)" role="button">Composability</a>
+  <a href="javascript:void(0)" role="button">Debuggability</a>
+  <a href="javascript:void(0)" role="button">Expressiveness</a>
+  <a href="javascript:void(0)" role="button">Extensibility</a>
+  <a href="javascript:void(0)" role="button">Interoperability</a>
+  <a href="javascript:void(0)" role="button">Integrity</a>
+  <a href="javascript:void(0)" role="button">Maintainability</a>
+  <a href="javascript:void(0)" role="button">Measurability</a>
+  <a href="javascript:void(0)" role="button">Operability</a>
+  <a href="javascript:void(0)" role="button">Performance</a>
+  <a href="javascript:void(0)" role="button">Portability</a>
+  <a href="javascript:void(0)" role="button">Resilience</a>
+  <a href="javascript:void(0)" role="button">Rigor</a>
+  <a href="javascript:void(0)" role="button">Robustness</a>
+  <a href="javascript:void(0)" role="button">Safety</a>
+  <a href="javascript:void(0)" role="button">Security</a>
+  <a href="javascript:void(0)" role="button">Simplicity</a>
+  <a href="javascript:void(0)" role="button">Stability</a>
+  <a href="javascript:void(0)" role="button">Thoroughness</a>
+  <a href="javascript:void(0)" role="button">Transparency</a>
+  <a href="javascript:void(0)" role="button">Velocity</a>
+</div>
+
+<h2>Add the Badge to your README</h2>
+
+<svg id="svg" width="100%" height="20px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" contentScriptType="text/ecmascript" zoomAndPan="magnify" contentStyleType="text/css" preserveAspectRatio="xMidYMid meet" version="1.0">
+
+  <linearGradient xmlns:xlink="http://www.w3.org/1999/xlink" x2="0" y2="100%" xlink:type="simple" xlink:actuate="onLoad" id="a" xlink:show="other">
+      <stop stop-opacity=".1" stop-color="#bbb" offset="0"/>
+      <stop stop-opacity=".1" offset="1"/>
+  </linearGradient>
+
+  <rect rx="3" fill="#555" width="99" height="20" class="sWidth"/>
+
+  <rect id="svgGreenBackground" rx="3" fill="#4c1" width="39" x="96" height="20" class="vWidth tMove"/>
+
+  <rect id="svgGreenBackgroundStraighLine" fill="#4c1" x="96" width="13" height="20" class="tMove"/>
+
+  <rect id="svgGradient" rx="3" fill="url(#a)" width="135" height="20" class="sWidth"/>
+
+  <g font-size="11" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" fill="#fff">
+      <text x="6" fill="#010101" fill-opacity=".3" y="15">
+         platform values 
+      </text>
+      <text x="6" id="tText" y="14">
+         platform values 
+      </text>
+      <text id="svgTextShadow" fill="#010101" x="99" fill-opacity=".3" y="15" class="tMove">
+          Scalability, Maintainability, Debuggability
+      </text>
+      <text id="svgText" x="99" id="vText" y="14" class="tMove">
+          Scalability, Maintainability, Debuggability
+    </text>
+  </g>
+</svg>
+
+<label class="platform-badge-label">HTML</label>
+<input onClick="this.select();" type="text" id="badgeHTML"/>
+<button id="badgeHTMLCopy">Copy to Clipboard</button>
+<label class="platform-badge-label">Markdown</label>
+<input onClick="this.select();" type="text" id="badgeMarkdown"/>
+<button id="badgeMarkdownCopy">Copy to Clipboard</button>
+
+<h2>Explaination</h2>
+<p>
+This page was inspired by the talk <a href="https://vimeo.com/230142234">“Platform as a Reflection of Values: Joyent, node.js, and beyond”</a> by Bryan Cantrill. 
+I highly recommend you to watch it to get a deeper understanding of what platform values are.
+</p>
+
+<p>
+All of the above-specified values are good, and no one would argue that their platform should be unapproachable, insecure, ect.. 
+Unfortunately, you can’t focus on all of them at the same time. 
+Decision making requires you to make trade-offs.
+For example, when security is a core value and approachability isn’t then approachability can’t come at the cost of security.
+</p>
+
+<p>
+By being upfront with your values you can prevent them from becoming diluted, which can help you attract like-minded contributors, and perhaps steer away those, who focus on different values.
+Ultimately, being transparent with the focus of your platform provides a valuable tool in the decision-making process and helps in choosing the direction in which to steer it.
+</p>
+
+<script src="/{{fingerprint['digress-into-development/2018-03-01-platform-values/index.js']}}"> </script>
+
