@@ -7,7 +7,7 @@ keywords:      dudzik, frederik dudzik, rubysierung, soft typing, ruby soft typi
 redirect_from: blog/2014/11/16/say-hello-to-rubysierung/index.html
 ---
 
-After reading [Avdi Grimm's](http://devblog.avdi.org/) book "[Confident Ruby](http://www.confidentruby.com/)” and my work on [CallBaecker](https://github.com/doodzik/CallBaecker) and [defp](https://github.com/doodzik/defp) I had an Idea for an implementation of soft typing in Ruby.
+After reading [Avdi Grimm's](http://devblog.avdi.org/) book “[Confident Ruby](https://web.archive.org/web/20180201201752/http://www.confidentruby.com/)” and my work on [CallBaecker](https://github.com/doodzik/CallBaecker) and [defp](https://github.com/doodzik/defp) I had an Idea for an implementation of soft typing in Ruby.
 My goal was to build a shorthand for ruby’s conversion methods syntactic similar to other languages.
 By relying on ruby’s conversion methods I preserved the initial flexibility of ruby. Furthermore I’ve added extended Error messages to ease debuging code. And you can add custom types.
 
