@@ -5,6 +5,7 @@ function validateForm() {
 
 	var email   = form['email']
 	var content = form['content']
+	var name    = form['name']
 
 	var returnValue = true
 
@@ -27,7 +28,9 @@ function validateForm() {
 	}
 
 	validate('emailError', (email.value == null || email.value.trim() === '') || !validateEmail(email.value))
+	validate('nameError', (name.value == null || name.value.trim() === ''))
 	validate('contentError', (content.value == null || content.value.trim() === ''))
+
 
 	return returnValue
 }

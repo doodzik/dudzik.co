@@ -4,12 +4,17 @@ description: The form to contact Frederik Dudzik
 keywords:    dudzik, frederik dudzik, frederik dudzik contact, contact frederik dudzik, contact dudzik, dudzik contact
 ---
 
-<ul>
-  <li>You can write me in English.</li>
-  <li>Du kannst mir auf Deutsch schreiben.</li>
-  <li>Możesz do mnie napisać po polsku.</li>
-  <li>Puedes escribirme en español.</li>
-</ul>
+<div class="contact-header">
+  <ul class="contact-spoken-lang">
+    <li>You can write me in English.</li>
+    <li>Du kannst mir auf Deutsch schreiben.</li>
+    <li>Możesz do mnie napisać po polsku.</li>
+    <li>Puedes escribirme en español.</li>
+  </ul>
+  <div class="contact-image">
+    <img src="http://data.dudzik.co/profile-picture.jpeg" width="200" height="200" alt="Profile Picture of Frederik Dudzik">
+  </div>
+</div>
 
 <br/>
 
@@ -20,9 +25,13 @@ keywords:    dudzik, frederik dudzik, frederik dudzik contact, contact frederik 
 
   <label for="email">Email:</label>
   <label id="emailError" for="email" class="error">Please enter a correct Email address</label>
-  <input type="email" name="email" id="email" class="contact-email validate" autofocus>
+  <input type="email" name="email" id="email" class="contact-input validate" autofocus>
 
-  <label for="content">your message:</label>
+  <label for="name">Name:</label>
+  <label id="nameError" for="name" class="error">Please enter a Name</label>
+  <input type="text" name="name" id="name" class="contact-input">
+
+  <label for="content">Your Message:</label>
   <label for="content" id="contentError" class="error">Please enter a message</label>
   <textarea name="content" class="contact-message" id="content">Hi Frederik,&#10;&#10;</textarea>
 
