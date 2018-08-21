@@ -26,7 +26,7 @@ Also, don’t forget to tell others if you plan on refactoring substantial parts
 
 Do not forget to follow code conventions and to configure your editor accordingly.
 Whitespace at the end of lines, the use of spaces/tabs for indentation, and much more are can cause a merge conflict unnecessarily.
-You can enforce your conventions by using a [pre-commit hook](https://git-scm.com/book/gr/v2/Customizing-Git-Git-Hooks) or a continuous integration service.
+You can enforce your conventions by using a [pre-commit hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) or a continuous integration service.
 And please ignore compiled files, because if they do change then, no-one knows how they are supposed to look.
 
 Using many short files rather than long ones reduces the probability of working on the same file.
