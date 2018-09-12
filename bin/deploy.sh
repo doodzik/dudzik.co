@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -ev
 
 if [ ! -e "./.tmp" ]; then

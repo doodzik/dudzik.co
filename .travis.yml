@@ -16,7 +16,7 @@ script:
 - make build
 - if [ "$TRAVIS_BRANCH" == "greenkeeper*" ]; then node vat.js; fi
 after_success:
-- if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" = false ]; then ./deploy.sh; fi
+- if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" = false ]; then ./bin/deploy.sh; fi
 env:
   global:
   - NODE_VERSION="5.7"
