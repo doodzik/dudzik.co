@@ -6,6 +6,8 @@ description: I’ve switched my keyboard layout from QWERTY to Dvorak around fiv
 keywords: Should I Use an Alternative Keyboard Layout Like Dvorak, Why use the Dvorak layout, Should You Switch to Dvorak or Colemak, The Pros and Cons of Using Dvorak, How to Get Started with an Alternative Keyboard, Dvorak vs QWERTY, QWERTY vs Dvorak, Is Dvorak better than QWERTY
 ---
 
+> There is an [interesting discussion on hackernews](https://news.ycombinator.com/item?id=18035045) that was sparked by this article. I encourage you to check it out as it provides more insights than this article.
+
 Dvorak is a keyboard layout said to reduce the movement of your fingers compared to the default QWERTY layout. The promise is that it increases your typing speed and reduces the strain on your fingers. 
 
 I’ve switched my keyboard layout from QWERTY to Dvorak around five years ago.
