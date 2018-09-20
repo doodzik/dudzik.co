@@ -1,5 +1,4 @@
-
-serve: clean
+server: clean
 	NODE_PATH=. node build.js
 
 build: clean
@@ -18,5 +17,5 @@ blog:
 dev:
 	./bin/dev ${TITLE}
 
-.PHONY: serve clean install build mini dev
+.PHONY: server clean install build mini dev
 
