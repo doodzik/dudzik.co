@@ -3,17 +3,26 @@ subtitle: personal blog
 description: This is the personal blog of Frederik Dudzik
 keywords: frederik dudzik, dudzik 
 ---
-<p>Hello World,</p>
+<header>
+  <h3>
+    <a href='/personal-blog'>personal blog</a> of <a href='/'>frederik dudzik</a>
+  </h3>
+</header>
 
-<p>My name is <a href="/">Frederik</a> and this is my <a href="/personal-blog">personal blog</a>.</p>
-
-<br/>
-
-<ul>
-  <li><a href="{{ collections['personal-blog'][0].pathContent }}">Latest Post</a></li>
-  <li><a href="./archive">Archive</a></li>
-  <li><a href="https://github.com/doodzik/dudzik.co/tree/master/src/personal-blog">Source Code</a></li>
-  <li><a href="/{{ collection }}/atom.xml">RSS Feed</a></li>
-  <li><a href="{{mailingList}}">Mailing List</a></li>
+<ul class="posts">
+  {% for post in collections['personal-blog'] %}
+    {% if current_year | default('null') != post.date | date('Y') %}
+      <li class="posts-seperator">
+        <span>
+          {{ post.date | date('Y') }}
+        </span>
+      </li>
+    {% endif %}
+    <li>
+      {% set current_year = post.date | date('Y') %}
+      <a href="/{{ post.path }}"> 
+        <h3>{{post.headline}}</h3>
+      </a>
+    </li>
+  {% endfor %}
 </ul>
-

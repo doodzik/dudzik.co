@@ -9,7 +9,7 @@ Feel free to [contact me](/contact).
 
 <br/>
 
-#### Blog
+#### Writing
 * [Software Development Blog](/digress-into-development)
 * [Personal Blog](/personal-blog)
 
