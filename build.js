@@ -6,7 +6,7 @@ var layout       = require('metalsmith-layouts')
 var collections  = require('metalsmith-collections')
 var permalinks   = require('metalsmith-permalinks')
 var sitemap      = require('metalsmith-sitemap')
-var linkcheck    = require('metalsmith-linkcheck')
+// var linkcheck    = require('metalsmith-linkcheck')
 var formatcheck  = require('metalsmith-formatcheck')
 var compress     = require('metalsmith-gzip')
 var If           = require('metalsmith-if')
@@ -170,7 +170,7 @@ metalsmith(__dirname)
 
 	.use(formatcheck({ verbose: true }))
 	.use(sitemap({ hostname: 'https://dudzik.co' }))
-	.use(linkcheck({ failMissing: true, verbose: true }))
+	// .use(linkcheck({ failMissing: true, verbose: true }))
 
 	.use(If(
 		!process.env.PRODUCTION,

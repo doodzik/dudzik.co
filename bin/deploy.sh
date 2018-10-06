@@ -6,6 +6,8 @@ if [ ! -e "./.tmp" ]; then
   exit 1
 fi 
 
+mv ./bin/deploy/yt ./.tmp/project/
+
 ncftp -u $FTP_USER -p $FTP_PASS $FTP_HOST <<< "
   put -R ./.tmp
   put ./.tmp/.htaccess
