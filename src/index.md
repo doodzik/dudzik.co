@@ -12,11 +12,9 @@ Feel free to [contact me](/contact).
 #### Writing
 * [Software Development Blog](/digress-into-development)
 * [Personal Blog](/personal-blog)
-* [Twitter](https://twitter.com/doodzik/)
 
 #### Software
 * [iOS and macOS](https://itunes.apple.com/developer/frederik-dudzik/id1239181420)
 * [Android](https://play.google.com/store/apps/developer?id=Frederik+Dudzik)
 * [Open Source](https://github.com/doodzik)
-<!-- * [321157](https://www.youtube.com/channel/UCxn7NPh14hNmQC8YqMr2Urg) -->
 
