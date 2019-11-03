@@ -15,6 +15,5 @@ Feel free to [contact me](/contact).
 
 #### Software
 * [iOS and macOS](https://itunes.apple.com/developer/frederik-dudzik/id1239181420)
-* [Android](https://play.google.com/store/apps/developer?id=Frederik+Dudzik)
 * [Open Source](https://github.com/doodzik)
 

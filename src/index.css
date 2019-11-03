@@ -11,9 +11,29 @@
     --color-link-active:           purple;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background:            #161716;
+        --color-text:                  #FFFFFF;
+        --color-text-unobtrusive-more: #8e8e93;
+    }
+}
+
 /************************/
 /*********RESETS*********/
 /************************/
+
+'@media (prefers-color-scheme: light)' => array(
+  'body' => array(
+    'color'       => '#444',
+    'background'  => '#eee',
+  )
+),
+'@media (prefers-color-scheme: dark)' => array(
+  'body' => array(
+  )
+),
+
 
 body {
   margin: 40px auto;
@@ -97,29 +117,6 @@ footer {
 /************************/
 /*********Contact********/
 /************************/
-
-.contact-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap-reverse;
-}
-
-.contact-header  > * {
-  flex: 1;
-  padding: 1rem;
-  min-width: 200px;
-  text-align: center;
-}
-
-.contact-header  > .contact-spoken-lang {
-  min-width: 275px;
-  max-width: 332px;
-}
-
-.contact-header  > .contact-image {
-  max-width: 200px;
-}
 
 .contact-message {
   width: 100%;
